@@ -469,7 +469,7 @@
         "autoCover": {
             "creature": "생물로부터의 엄폐",
             "greater": "강력한 엄폐",
-            "greater-prone": "강력한-쓰러짐 엄폐",
+            "greater-prone": "강력한-엎드린 엄폐",
             "lesser": "약소한 엄폐",
             "none": "엄폐 없음",
             "override": "엄폐 덮어쓰기",
