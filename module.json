@@ -1,0 +1,89 @@
+{
+    "id": "pf2e-toolbelt",
+    "title": "PF2e Toolbelt (한국어)",
+    "description": "Foundry VTT의 pf2e 시스템을 위한 다양한 기능 모음 — 한국어 번역본.",
+    "authors": [
+        {
+            "name": "Idle",
+            "discord": "idleatre"
+        }
+    ],
+    "esmodules": [
+        "scripts/main.js"
+    ],
+    "compatibility": {
+        "minimum": "14.360",
+        "verified": "14.361",
+        "maximum": "14"
+    },
+    "socket": true,
+    "version": "3.49.0",
+    "url": "https://github.com/sepi-toolbox/pf2e-toolbelt-ko",
+    "readme": "https://github.com/sepi-toolbox/pf2e-toolbelt-ko/blob/main/README.md",
+    "manifest": "https://raw.githubusercontent.com/sepi-toolbox/pf2e-toolbelt-ko/main/module.json",
+    "download": "https://github.com/sepi-toolbox/pf2e-toolbelt-ko/archive/refs/heads/main.zip",
+    "changelog": "https://github.com/sepi-toolbox/pf2e-toolbelt-ko/blob/main/CHANGELOG.md",
+    "bugs": "https://github.com/reonZ/pf2e-toolbelt/issues",
+    "styles": [
+        "styles/pf2e-toolbelt.css"
+    ],
+    "relationships": {
+        "systems": [
+            {
+                "id": "pf2e",
+                "type": "system",
+                "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.pf2e.json",
+                "compatibility": {
+                    "minimum": "8.1.0"
+                }
+            },
+            {
+                "id": "sf2e",
+                "type": "system",
+                "manifest": "https://raw.githubusercontent.com/foundryvtt/pf2e/master/system.sf2e.json",
+                "compatibility": {
+                    "minimum": "1.1.0"
+                }
+            }
+        ],
+        "requires": [
+            {
+                "id": "lib-wrapper",
+                "type": "module",
+                "manifest": "https://raw.githubusercontent.com/ruipin/fvtt-lib-wrapper/master/module.json"
+            }
+        ]
+    },
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        },
+        {
+            "lang": "pl",
+            "name": "Polish",
+            "path": "lang/pl.json"
+        },
+        {
+            "lang": "cn",
+            "name": "简体中文",
+            "path": "lang/cn.json"
+        },
+        {
+            "lang": "pt-BR",
+            "name": "Português Brasileiro",
+            "path": "lang/pt-BR.json"
+        },
+        {
+            "lang": "ko",
+            "name": "한국어",
+            "path": "lang/ko.json"
+        }
+    ]
+}

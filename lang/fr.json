@@ -1,0 +1,1163 @@
+{
+  "PF2E.RuleElement.Actionable": "Actionnable",
+  "PF2E.RuleElement.ItemCast": "Lancé par un objet",
+  "LEVIKTIMES": {
+    "playerOnly": "Joueur uniquement",
+    "gmOnly": "MJ uniquement",
+    "reloadRequired": "Nécessite le rechargement",
+    "emiting": {
+      "label": "Envoi",
+      "noGm": "Un MJ doit être en ligne pour pouvoir autoriser cette demande."
+    }
+  },
+  "pf2e-toolbelt": {
+    "keybindings": {
+      "conditionManager": {
+        "manage": {
+          "name": "Gérer l'état",
+          "hint": "Touche maintenue lors de la suppression d'un état pour gérer sa durée."
+        }
+      },
+      "betterMovement": {
+        "teleport": {
+          "name": "Téléportation des jetons",
+          "hint": "Touche maintenue tout en cliquant sur la scène pour téléporter tous les jetons sélectionnés."
+        },
+        "unselect": {
+          "name": "Téléportation des jetons (désélectionner)",
+          "hint": "Maintenez la touche tout en cliquant sur la scène pour téléporter tous les jetons sélectionnés. Désélectionnez également les jetons en appuyant sur la touche liée pour une vision dégagée sur la totalité de la scène."
+        }
+      },
+      "droppeth": {
+        "droppeth": {
+          "name": "Modificateur pour le dépôt sur la scène",
+          "hint": "Touche maintenue lorsque vous déposez un objet sur le sol."
+        }
+      }
+    },
+    "settings": {
+      "actionable": {
+        "title": "Actionnable",
+        "action": {
+          "name": "Macro d'action",
+          "hint": "Ajoute un moyen de lier une macro à des actions/dons."
+        },
+        "apply": {
+          "name": "Auto-appliqué",
+          "hint": "Pour utiliser le bouton pour l'effet auto-appliqué appliquera automatiquement l'effet."
+        },
+        "cast": {
+          "name": "Incantation de sorts par un objet",
+          "hint": "Chaque fois que vous équipez ou investissez un objet, cela ajoute un nouvel élément de règle qui génère des entrées d'incantation virtuelles."
+        },
+        "item": {
+          "name": "Macro d'objet",
+          "hint": "Ajoute un moyen de lier une macro aux objets d'équipement & consommables."
+        },
+        "physical": {
+          "name": "Actions physiques",
+          "hint": "Ajoute un nouvel élément de règle qui génère des actions virtuelles chaque fois qu'un objet physique est équipé/investi."
+        },
+        "spell": {
+          "name": "Macro de sort",
+          "hint": "Ajoute un moyen de lier une macro aux sorts."
+        },
+        "use": {
+          "name": "Utiliser un consommable",
+          "hint": "Ajoutera un bouton « utiliser » pour les consommables et enverra un message personnalisé lors de son utilisation."
+        }
+      },
+      "anonymous": {
+        "title": "Anonyme",
+        "action": {
+          "name": "Anonymiser les actions des PNJ",
+          "hint": "Les actions envoyées dans la conversation par un acteur non détenu par un joueur seront anonymisées pour les joueurs."
+        },
+        "spell": {
+          "name": "Anonymiser les sorts des PNJ",
+          "hint": "Les sorts lancés par un acteur non détenu par un joueur seront anonymisés pour les joueurs."
+        },
+        "traits": {
+          "name": "Afficher les traits",
+          "hint": "Lorsque le module anonymise un message, les traits doivent-ils être affichés ?",
+          "choices": {
+            "disabled": "Désactivé",
+            "all": "Tous les traits",
+            "blacklist": "Utiliser la liste noire"
+          }
+        }
+      },
+      "arp": {
+        "title": "Progression automatique des runes",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Si votre monde utilise cette variante, elle met automatiquement à jour les armes et armures en leur attribuant des runes et améliorations fondamentales au niveau approprié."
+        },
+        "force": {
+          "name": "Forcer la mise à jour",
+          "hint": "Lorsque cette option est activée, les runes et la qualité sont toujours mis à jour en fonction du niveau de l'acteur. Lorsqu'elle est désactivée, seules les runes et la qualité dont la valeur est inférieure à celle attendue pour ce niveau sont mises à jour."
+        },
+        "price": {
+          "name": "Pas de rune/d'amélioration dans le prix",
+          "hint": "Le prix des runes fondamentales/améliorations seront soustraits du prix de l'arme."
+        },
+        "shield": {
+          "name": "Rune/amélioration de bouclier",
+          "hint": "Les boucliers seront aussi mis à jour."
+        }
+      },
+      "autoCover": {
+        "title": "Abri automatique",
+        "creature": {
+          "name": "Abri des créatures",
+          "hint": "Les créatures doivent-elles offrir une abri inférieur ou standard lors d'un jet d'attaque ?",
+          "choices": {
+            "disabled": "Désactivé",
+            "cross": "Intersection de 2 côtés opposés",
+            "zero": "Intersection de n'importe quel côté",
+            "ten": "N'importe quel côté avec une marge de 10 %",
+            "twenty": "N'importe quel côté avec une marge de 20 %"
+          }
+        },
+        "dead": {
+          "name": "Éviter les créatures mortes",
+          "hint": "Les créatures mortes ne devraient pas fournir d'abri."
+        },
+        "prone": {
+          "name": "Éviter les créatures À terre",
+          "hint": "Les créatures À terre ne devraient pas fournir d'abri."
+        },
+        "wall": {
+          "name": "Abri des murs",
+          "hint": "Les créatures ciblées doivent-elles bénéficier d'un abri standard lorsqu'un mur barre le chemin qui les sépare de leur attaquant ? Le centre de chaque créature sera toujours testé.",
+          "choices": {
+            "center-center": "Centre à centre",
+            "center-spread": "Centre vers l'étalement",
+            "center-corner": "Centre vers les coins",
+            "corner-center": "Coins vers le centre",
+            "corner-spread": "Coins vers l'étalement",
+            "corner-corner": "coins vers les coins",
+            "disabled": "Désactivé"
+          }
+        }
+      },
+      "betterChat": {
+        "merge": {
+          "name": "Bouton de fusion",
+          "hint": "Ajoute un bouton aux messages de dégâts leur permettant d'être fusionnés avec les autres messages de dégâts."
+        },
+        "inject": {
+          "name": "Bouton d'injection",
+          "hint": "Ajoute un bouton aux messages de dégâts permettant de les injecter dans un message de dégâts précédent."
+        }
+      },
+      "betterEffectsPanel": {
+        "title": "Panneau d'effets amélioré",
+        "remove": {
+          "name": "Raccourci de suppression d'effet",
+          "hint": "L'utilisation de [Maj + clic droit] sur les icônes d'effet dans le panneau d'effets supprimera instantanément toutes leurs charges/compteurs/badges."
+        }
+      },
+      "betterInventory": {
+        "title": "Meilleur inventaire",
+        "coins": {
+          "name": "Pièces sans poids",
+          "hint": "Les pièces n'ont aucun poids dans l'inventaire."
+        },
+        "dropped": {
+          "name": "Pas d'Encombrement lâché",
+          "hint": "L'équipement lâché dans l'inventaire d'un acteur ne sera pas pris en compte dans le calcul de l'Encombrement."
+        },
+        "improvised": {
+          "name": "Bouton d'arme improvisée",
+          "hint": "Ajoutez un bouton dans l'inventaire des acteurs des personnages pour créer une arme improvisée à la volée."
+        },
+        "mergeItems": {
+          "name": "Bouton de fusion d'objets",
+          "hint": "Ajoutez un bouton de fusion dans l'onglet inventaire pour fusionner des piles d'objets."
+        },
+        "partyAsObserved": {
+          "name": "Observer le groupe allié",
+          "hint": "Autorise les joueurs à consulter les fiches d'acteur en ayant les droits 'Limité' tant qu'ils appartiennent à l'alliance 'Groupe'. À ne pas confondre avec l'acteur 'Groupe'."
+        },
+        "splitItem": {
+          "name": "Autoriser la division des objets",
+          "hint": "Cliquez sur le nombre d'objets sur une feuille d'acteur pour le diviser en plusieurs entrées."
+        }
+      },
+      "betterMerchant": {
+        "title": "Meilleur marchand",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Ajoute des fonctionnalités personnalisées au système de marchand par défaut"
+        }
+      },
+      "betterMovement": {
+        "title": "Meilleur déplacement",
+        "teleport": {
+          "name": "Téléportation des jetons",
+          "hint": "Cliquer sur le tableau tout en maintenant la touche liée définie téléportera instantanément les jetons sélectionnés à l'emplacement sans aucun déplacement.",
+          "choices": {
+            "disabled": "Désactivé",
+            "enabled": "Activé",
+            "select": "Resélectionner les jetons"
+          }
+        },
+        "history": {
+          "name": "Aucun enregistrement de l'historique",
+          "hint": "L'enregistrement de l'historique de déplacement devrait-il être bloqué ? Cela rend les actions de déplacement successives au cours d'un même tour moins confuses."
+        }
+      },
+      "betterSheet": {
+        "title": "Meilleure feuille d'acteur",
+        "partyAsObserved": {
+          "name": "Observer le groupe allié",
+          "hint": "Autorise les joueurs à consulter les fiches d'acteur en ayant les droits 'Limité' tant qu'ils appartiennent à l'alliance 'Groupe'. À ne pas confondre avec l'acteur 'Groupe'."
+        },
+        "retrainFeats": {
+          "name": "Bouton de réapprentissage des dons",
+          "hint": "Ajoute un bouton de réapprentissage pour les dons sur la fiche de personnage."
+        },
+        "showPlayers": {
+          "name": "Montrer l'avatar aux joueurs",
+          "hint": "Ajoute un bouton 'Montrer aux joueurs' sur le panneau avatar des feuilles d'acteurs."
+        },
+        "sortList": {
+          "name": "Bouton de tri de la liste",
+          "hint": "Ajoute des boutons de tri à différentes listes de la fiche d'acteur."
+        }
+      },
+      "betterTrade": {
+        "title": "Meilleur commerce",
+        "invertTrade": {
+          "name": "Modificateur d'échange inversé",
+          "hint": "Les joueurs n'auront plus besoin de maintenir 'Maj' enfoncé pour donner un objet sans initier un échange. (Maintenir 'Maj' initiera la demande d'échange)"
+        }
+      },
+      "betterUI": {
+        "title": "Interface utilisateur améliorée",
+        "unscaleTokenHUD": {
+          "name": "Token HUD non mis à l'échelle",
+          "hint": "Rétablir la mise à l'échelle de Token HUD"
+        }
+      },
+      "characterImporter": {
+        "title": "Importateur de personnages",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Autoriser les utilisateurs à importer un personnage depuis Pathbuilder étape par étape.",
+          "choices": {
+            "disabled": "Désactivé",
+            "gm": "MJ seulement",
+            "all": "Tous les utilisateurs"
+          }
+        }
+      },
+      "conditionManager": {
+        "title": "Gestionnaire d'état",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Faites glisser un état tout en maintenant la touche définie pour ouvrir le gestionnaire d'états vous permettant de définir sa durée."
+        }
+      },
+      "droppeth": {
+        "title": "Dépôt sur la scène",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Autoriser les utilisateurs à déposer des éléments sur le canevas en maintenant la touche attribuée."
+        },
+        "light": {
+          "name": "Source de lumière",
+          "hint": "L'objet lâché doit-il émettre de la lumière ? Ce n'est le cas que si un seul objet est présent dans l'acteur de butin."
+        }
+      },
+      "giveth": {
+        "title": "Donner",
+        "effect": {
+          "name": "Effets/États",
+          "hint": "Les joueurs peuvent glisser des effets & des états sur des personnages qui ne leur appartiennent pas.",
+          "choices": {
+            "disabled": "Désactivé",
+            "ally": "Alliés seulement",
+            "all": "Tous les acteurs"
+          }
+        }
+      },
+      "heroActions": {
+        "title": "Actions héroïques",
+        "count": {
+          "name": "Fixer la variante d'héroïsme",
+          "hint": "Si la valeur est 0, les personnages ne peuvent effectuer qu'une seule action de héros par point d'héroïsme. Sinon, le nombre d'actions de héros sera dissocié du nombre de points d'héroïsme disponibles et les personnages devront retirer les actions de héros du jeu."
+        },
+        "enabled": {
+          "name": "Activé",
+          "hint": "Souhaitez vous que votre monde utilise les actions du jeu de cartes des actions de héros ?"
+        },
+        "private": {
+          "name": "Tirage privé",
+          "hint": "Rendre le message généré lors du tirage des actions d'héroïsme privé. Si cette option est activée, les échanges seront invisibles pour tous les participants."
+        },
+        "table": {
+          "name": "Table UUID",
+          "hint": "Identifiant unique de la table que vous souhaitez utiliser dans votre monde. Pour obtenir l'UUID d'une table (dans un compendium ou dans un répertoire de tables aléatoires), ouvrez simplement la table et faites un clic gauche sur 📔 à côté de son nom."
+        },
+        "trade": {
+          "name": "Autoriser l'échange",
+          "hint": "Lorsque cette option est activée, les personnages pourront échanger des actions entre eux."
+        }
+      },
+      "identify": {
+        "title": "Identifier",
+        "delay": {
+          "name": "Délai de 24 heures",
+          "hint": "Lorsque cette option est activée, un personnage devra attendre 24 heures après avoir échoué à identifier un objet avant de pouvoir effectuer une nouvelle tentative. Autrement, le délai sera réinitialisé le jour suivant."
+        },
+        "enabled": {
+          "name": "Activé",
+          "hint": "Vous aidera à gérer les objets non identifiés dans votre monde et de conserver la trace des objets qui sont identifiés."
+        },
+        "identifyPartials": {
+          "name": "Identifier automatiquement les objets similaires",
+          "hint": "Les objets 'similaires' devraient aussi être identifiés en utilisant l'option 'Identifier automatiquement les objets connus'."
+        },
+        "playerRequest": {
+          "name": "Permettre les sollicitations des joueurs",
+          "hint": "Les joueurs devraient-ils pouvoir être capables de solliciter l'identification des objets."
+        }
+      },
+      "resourceTracker": {
+        "title": "Suivi des ressources",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Activez cet outil dans votre monde. Le traqueur peut être activé/désactivé via les commandes de l'interface utilisateur située à gauche."
+        }
+      },
+      "rollTracker": {
+        "title": "Compteur de rencontre",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Suivre les jets pour voir si les joueurs sont vraiment si malchanceux."
+        }
+      },
+      "shareData": {
+        "title": "Données partagées",
+        "enabled": {
+          "name": "Activé",
+          "hint": "Les acteurs pourront lier/partager leurs données entre eux."
+        }
+      },
+      "targetHelper": {
+        "title": "Assistant de ciblage",
+        "checks": {
+          "name": "Amélioration des messages des tests",
+          "hint": "Améliore les messages des jets de sauvegarde en ligne simples pour les rendre exploitables par la fonctionnalité. Leur ajoute également des détails."
+        },
+        "enabled": {
+          "name": "Activé",
+          "hint": "Activez l'«Assistant de ciblage» dans votre monde."
+        },
+        "small": {
+          "name": "Petits boutons de dégâts",
+          "hint": "Réduit la taille des boutons de dégâts pour les cibles supplémentaires."
+        },
+        "targets": {
+          "name": "Ajouter les cibles aux messages",
+          "hint": "Cela ajoutera des cibles supplémentaires aux messages de discussion lorsque des dégâts peuvent être appliqués et des jets de sauvegarde peuvent être effectuées."
+        },
+        "template": {
+          "name": "Assistant de gabarit",
+          "hint": "Lorsque vous placez un gabarit sur la scène, une nouvelle boîte de dialogue apparaîtra vous permettant de cibler tous les jetons qu'il contient."
+        }
+      },
+      "underground": {
+        "title": "Souterrain",
+        "alpha": {
+          "name": "Opacité",
+          "hint": "Valeur d'opacité lorsque le jeton a une élévation négative."
+        },
+        "contrast": {
+          "name": "Contraste",
+          "hint": "Valeur de contraste lorsque le jeton a une élévation négative."
+        },
+        "enabled": {
+          "name": "Activé",
+          "hint": "Permettra aux jetons avec une élévation négative de rester visibles sur la scène."
+        },
+        "mode": {
+          "name": "Filtre appliqué",
+          "hint": "Quel type de filtre doit être appliqué aux jetons avec une élévation négative.",
+          "choices": {
+            "normal": "Pas de filtre",
+            "greyscale": "Filtre en niveaux de gris",
+            "sepia": "Filtre sépia"
+          }
+        },
+        "tiles": {
+          "name": "Tuiles d'arrière-plan",
+          "hint": "Les tuiles de scène dont l'élévation est inférieure ou égale à 0 seront toujours dessinées derrière les jetons dont l'élévation est négative. ATTENTION : cela peut entrer en conflit avec d'autres modules qui utilisent également des tuiles."
+        }
+      },
+      "unided": {
+        "title": "Définir une image non identifiée",
+        "create": {
+          "name": "Lors de la création d'un objet",
+          "hint": "Définissez automatiquement l'image non identifiée des objets pour qu'elle soit identique à l'image normale lorsque l'objet est créé/importé."
+        },
+        "update": {
+          "name": "Lors de la mise à jour de l'objet",
+          "hint": "Mise à jour automatique de l'image non identifiée lorsque l'image de l'objet ordinaire est mise à jour."
+        }
+      }
+    },
+    "actionable": {
+      "action": {
+        "label": "Effet auto-appliqué / Macro",
+        "hint": "Un unique effet d'objet à appliquer à l'acteur qui utilise cette action ou une macro qui sera exécutée lorsque cette action sera utilisée",
+        "cancel": "action <strong>{name}</strong> a été effacée par sa macro."
+      },
+      "cast": {
+        "equipped": "Pas équipé",
+        "label": "Incantation de sort d'objet"
+      },
+      "generate-cast": {
+        "add": "Ajouter une règle",
+        "attribute": "Attribut",
+        "dc": "DD",
+        "empty": "Aucun sort supplémentaire n'a été trouvé dans la description de l'objet.",
+        "label": "Lancé par un objet",
+        "max": "# max d'utilisations",
+        "predicate": "Prédicat",
+        "rank": "Rang",
+        "statistic": "Statistique",
+        "title": "Générer des règles « Lancé par un objet » à partir de la description",
+        "tradition": "Tradition"
+      },
+      "item": {
+        "label": "Macro",
+        "hint": "Une macro qui sera exécutée lorsque cet élément sera utilisé",
+        "cancel": "usage de <strong>{name}</strong> a été effacé par sa macro."
+      },
+      "spell": {
+        "label": "Macro",
+        "hint": "Une macro qui sera exécutée lorsque ce sort sera lancé",
+        "cancel": "le sort <strong>{name}</strong> lancé a été effacé par sa macro."
+      },
+      "virtual": "Il s'agit d'une action virtuelle ajoutée par :"
+    },
+    "anonymous": {
+      "action": {
+        "context": "Révéler l'action aux joueurs",
+        "header": "Utilise une capacité."
+      },
+      "revealed": "Révélé par",
+      "spell": {
+        "damage": "Dégâts de sort",
+        "context": "Révéler le sort aux joueurs",
+        "header": "Is casting a spell.."
+      }
+    },
+    "autoCover": {
+      "creature": "Abri par la créature",
+      "greater": "Abri supérieur",
+      "greater-prone": "Abri supérieur en étant À terre",
+      "lesser": "Abri inférieur",
+      "none": "Pas d'abri",
+      "override": "Ignorer l'abri",
+      "overriden": "Abri ignoré",
+      "standard": "Abri standard",
+      "wall": "Abri par le mur"
+    },
+    "betterChat": {
+      "mergeDamage": {
+        "buttons": {
+          "inject": "Injecter les dégâts au message précédent",
+          "menu": {
+            "inject": "[Maj] Ouvrir le menu injecter",
+            "merge": "[Maj] Ouvrir le menu fusionner"
+          },
+          "merge": "Fusionner avec le message de dégâts précédent",
+          "split": "Revenir aux messages d'origine"
+        },
+        "injected": "Des dégâts ont été injectés dans ce message",
+        "menu": {
+          "inject-damage": {
+            "double": "Injecter le double des dégâts",
+            "full": "Injecter la totalité des dégâts",
+            "half": "Injecter la moitié des dégâts",
+            "title": "Menu injecter",
+            "yes": "Injecter"
+          },
+          "merge-damage": {
+            "double": "Fusionner le double des dégâts",
+            "full": "Fusionner la totalité des dégâts",
+            "half": "Fusionner la moitié des dégâts",
+            "title": "Menu fusionner",
+            "yes": "Fusionner"
+          },
+          "originMerge": "Message actuel",
+          "targetMerge": "Message précédent"
+        },
+        "noMatch": "Impossible de trouver un autre message de dégât correspondant."
+      }
+    },
+    "betterInventory": {
+      "improvised": {
+        "label": "Arme improvisée"
+      },
+      "merge": {
+        "none": "Il n'y a aucun objet à fusionner dans l'inventaire.",
+        "title": "Fusionner les objets : {name}",
+        "yes": "Fusionner"
+      },
+      "sheet": {
+        "improvised": "Créer une arme improvisée",
+        "merge": "Fusionner les objets",
+        "split": "Diviser l'objet"
+      },
+      "split": {
+        "quantity": {
+          "label": "Nouvelle quantité de la pile"
+        },
+        "title": "Objet divisé : {name}",
+        "yes": "Diviser"
+      }
+    },
+    "betterMerchant": {
+      "browserFilter": {
+        "create": "Créer un filtre",
+        "edit": "Éditer un filtre",
+        "empty": "Cela ne sert à rien de créer un filtre sans... filtres."
+      },
+      "browserPull": {
+        "add": "Ajouter au marchand",
+        "all": "Tout activer/désactiver",
+        "confirm": "<div>Êtes vous certains de vouloir ajouter le(s) objet(s) (<strong>{nb}</strong> sélectionnés) au marchand ?</div><div>Le processus peut prendre plusieurs secondes en fonction du nombre d'objets.</div>",
+        "finished": "Les objets ont fini d'être ajoutés à l'acteur marchand.",
+        "limit": "Vous avez atteint la limite !",
+        "owned": "Cet objet se trouve déjà dans l'inventaire du marchand",
+        "selected": "Sélectionné",
+        "title": "Ajouter les objets - {name}",
+        "wait": "Veuillez attendre que les objets soient traités."
+      },
+      "filtersMenu": {
+        "buy": "Acheter des filtres",
+        "delete": {
+          "title": "Supprimer le filtre",
+          "content": "Êtes-vous certain de vouloir supprimer ce filtre ?"
+        },
+        "enabled": "Activé",
+        "ratio": "Rapport prix",
+        "sell": "Vendre des filtres",
+        "service": "Filtres de service",
+        "tag": "Étiquette",
+        "title": "Filtres d'objet - {name}",
+        "treasure": "Les trésors atteignant ce filtre seront toujours achetés à 100 % de leur prix"
+      },
+      "importServices": {
+        "title": "Importer des services - {name}",
+        "yes": "Importer",
+        "error": "Une erreur s'est produite en tentant d'importer les services."
+      },
+      "item": {
+        "buy": {
+          "confirm": {
+            "content": "Est-ce que <strong>{buyer}</strong> souhaite acheter <strong>{item}</strong> ?",
+            "title": "Acheter l'objet - {item}"
+          },
+          "noTarget": "Vous devez sélectionner un acteur valide pour acheter chez ce marchand"
+        },
+        "error": "Une erreur s'est produite en tentant d'effectuer l'échange d'objet de meilleur marchand : <strong>{reason}</strong>.",
+        "noStock": "<strong>{actor}</strong> ne peut pas fournir la quantité demandée de <strong>{item}</strong>.",
+        "unwilling": "<strong>{actor}</strong> ne veut pas se séparer de <strong>{item}</strong>.",
+        "refuse": "<strong>{actor}</strong> n'est pas intéressé par l'achat de <strong>{item}</strong>.",
+        "sell": {
+          "button": "Vendre",
+          "prompt": "{acteur} souhaite-t-il vendre cet objet ?",
+          "title": "Vendre des articles"
+        },
+        "unided": "Personne de sensé ne voudrait acheter un objet quelconque non identifié."
+      },
+      "sheet": {
+        "browser": "Depuis le navigateur",
+        "filters": "Configurer les filtres",
+        "gems": "Créer des gemmes de sort",
+        "infiniteAll": {
+          "label": "Stocks infinis",
+          "tooltip": "Le marchand ne sera jamais à court d'articles à vendre (ne fait rien aux trésors ou aux services)"
+        },
+        "none": "Pas à vendre",
+        "scrolls": "Créer des parchemins",
+        "sellItems": {
+          "button": "Vendre les objets",
+          "noSelection": "Vous devez sélectionner un acteur vendeur valide."
+        }
+      },
+      "sellItems": {
+        "empty": "<strong>{name}</strong> ne semble pas intéressé par quoi que ce soit que vous ayez à offrir.",
+        "info": "Les prix suivants sont colorés en fonction d'un ratio supposé de <u>{treasure}</u> pour les trésors et de <u>{item}</u> pour les autres objets.",
+        "title": "Vente des objets - {name}",
+        "sell": "Vendre l'objet"
+      },
+      "sheetServices": {
+        "add": "Ajouter un service",
+        "buy": "Demander un service",
+        "copied": "Les services <strong>{name}</strong> ont été copiés dans le presse-papiers.",
+        "delete": "Supprimer le service",
+        "edit": "Éditer le service",
+        "enabled": "Activer/désactiver le service",
+        "export": "Exporter les services",
+        "free": "Gratuit",
+        "give": "Service gratuit",
+        "import": "Importer des services",
+        "label": "Services"
+      },
+      "service": {
+        "buy": "<strong>{buyer}</strong> a engagé les services de <strong>{seller}</strong>.",
+        "error": "Une erreur s'est produite en tentant de traiter un service ({service}) avec meilleur marchand  : <strong>{reason}</strong>.",
+        "give": "<strong>{seller}</strong> offre ses services à <strong>{buyer}</strong> gratuitement.",
+        "noBuyer": "Vous devez sélectionner un personnage/PNJ/groupe que vous possédez comme cible du service.",
+        "noFunds": "<strong>{buyer}</strong> ne dispose pas des fonds nécessaires pour engager les services de <strong>{seller}</strong>.",
+        "noStock": "<strong>{seller}</strong> n'offre plus ce service.",
+        "unwilling": "<strong>{seller}</strong> n'est plus disposé à offrir ce service."
+      },
+      "serviceMenu": {
+        "buy": "<strong>{buyer}</strong> a engagé les services de <strong>{seller}</strong>.",
+        "copied": "Le service <strong>{label}</strong> a été copié dans le presse-papiers.",
+        "delete": {
+          "title": "Effacer un service",
+          "content": "Êtes-vous certain de vouloir supprimer ce service ?"
+        },
+        "enabled": "Activé",
+        "error": "Une erreur s'est produite en tentant de traiter la demande de service",
+        "export": "Exporter le service",
+        "give": "<strong>{seller}</strong> offre ses services à <strong>{buyer}</strong> gratuitement.",
+        "macro": {
+          "label": "Macro exécutée sur le service",
+          "drop": "Déposer la macro ici"
+        },
+        "name": "Nom",
+        "noBuyer": "Vous devez sélectionner un personnage/PNJ/groupe que vous possédez comme cible du service.",
+        "noFunds": "<strong>{buyer}</strong> ne dispose pas des fonds nécessaires pour engager les services de <strong>{seller}</strong>.",
+        "none": "Impossible de trouver le service",
+        "noStock": "<strong>{seller}</strong> n'offre plus ce service.",
+        "quantity": "Nombre négatif pour un stock infini",
+        "tags": "Étiquettes de service",
+        "title": "Service - {label}"
+      }
+    },
+    "betterSheet": {
+      "retrain": {
+        "browser": "Ouvrir le navigateur de compendium",
+        "empty": "Glisser un don ici",
+        "error": {
+          "wrongDataType": "Type de données incorrect",
+          "wrongItemType": "N'accepte que les dons"
+        },
+        "replace": "Remplacer par",
+        "retrain": "Réapprentissage",
+        "title": "Réapprentissage de don"
+      },
+      "sortList": {
+        "sheet": {
+          "tooltip": "Trier le contenu",
+          "container": "Trier le contenu des contenants"
+        }
+      }
+    },
+    "characterImporter": {
+      "deleteData": {
+        "content": "Êtes-vous sûr de vouloir supprimer les données d'importation de ce personnage ?<br><br>NOTE : Cela ne mettra pas à jour le personnage lui-même.",
+        "title": "Supprimer les données d'importation"
+      },
+      "import": {
+        "code": {
+          "title": "Coller le code JSON",
+          "yes": "Analyser le JSON"
+        },
+        "fail": "L'importation du personnage a échoué.",
+        "file": {
+          "title": "Sélectionner un fichier JSON",
+          "yes": "Analyser le fichier"
+        },
+        "success": "L'importation du personnage a réussi.",
+        "url": {
+          "title": "Saisissez l'ID JSON du personnage",
+          "yes": "Analyser les données URL"
+        }
+      },
+      "sheet": {
+        "level": {
+          "cancel": "Fermer le menu d'importation de personnages",
+          "import": "Ouvrir le menu d'importation de personnages"
+        },
+        "import": {
+          "code": "À partir du code",
+          "delete": "Supprimer les données d'importation",
+          "file": "À partir d'un fichier",
+          "url": "Depuis l'URL"
+        },
+        "data": {
+          "core": {
+            "attributes": {
+              "assign": "Attribuer des primes d'attribut",
+              "override": "Utiliser la méthode de saisie manuelle",
+              "set": {
+                "boosts": "Des primes d'attribut ont été attribuées.",
+                "manual": "Les valeurs d'attribut ont été attribuées « manuellement »."
+              },
+              "warning": "Les données importées n'atteignent pas le dernier seuil de prime (niveau {level}).<br>Vous pourriez vouloir les mettre à jour."
+            }
+          },
+          "details": {
+            "age": "Âge",
+            "assign": "Attribuer les détails des entrées",
+            "current": "Actuel",
+            "expected": "Attendu",
+            "gender": "Genre",
+            "language": {
+              "assign": "Attribuer les langues",
+              "current": "Langues actuelles",
+              "expected": "Langues attendues"
+            },
+            "name": "Nom"
+          },
+          "entry": {
+            "action": {
+              "install": "Ajouter {match} au personnage",
+              "locked": "Impossible d'actualiser",
+              "refresh": "Actualiser l'objet actuel",
+              "replace": "Remplacer l'actuel par {match}",
+              "revert": "Supprimer le remplacement"
+            },
+            "current": "Actuel",
+            "drop": "Déposer {clé}",
+            "match": "Correspondance",
+            "override": "Remplacer"
+          },
+          "inventory": {
+            "currency": {
+              "assign": "Remplacer les devises",
+              "current": "Actuel",
+              "expected": "Attendu"
+            }
+          },
+          "skills": {
+            "assign": "Attribuer les compétences",
+            "current": "Actuel",
+            "expected": "Attendu"
+          },
+          "spellcasting": {
+            "add": {
+              "content": "Souhaitez-vous créer une nouvelle entrée d'incantation avec les données correspondantes ?",
+              "title": "Créer une nouvelle entrée d'incantation",
+              "yes": "Créer"
+            },
+            "fill": {
+              "content": "Souhaitez-vous ajouter tous les sorts qui n'ont pas pu être trouvés dans l'entrée « Incantation » ?",
+              "label": "Ajouter tous les sorts manquants",
+              "title": "Complétez l'incantation avec les sorts manquants.",
+              "yes": "Remplir"
+            },
+            "refresh": {
+              "label": "Actualiser les valeurs des emplacements",
+              "set": "Les emplacements d'incantation ont été actualisés."
+            }
+          }
+        },
+        "menu": {
+          "core": "Core",
+          "feats": "Dons",
+          "inventory": "Objets",
+          "skills": "Compétences",
+          "spells": "Sorts",
+          "details": "Détails"
+        },
+        "title": "Importateur de personnages"
+      }
+    },
+    "conditionManager": {
+      "manager": {
+        "title": "Gestionnaire d'état - {name}",
+        "add": "Créer",
+        "cancel": "Annuler",
+        "origin": "Origine",
+        "label": "Étiquette",
+        "anonymous": "Anonyme"
+      }
+    },
+    "droppeth": {
+      "dialog": {
+        "button": "Dépose",
+        "prompt": "Combien d'objets souhaitez-vous déposer ?",
+        "title": "Objet déposé au sol"
+      },
+      "error": {
+        "actor": "Impossible de créer l'acteur déposé.",
+        "out-of-bounds": "Impossible de créer un jeton de dépôt au sol à l'emplacement fourni.",
+        "unknown": "Une erreur s'est produite En tentant de déposer cet/ces objet(s).",
+        "no-scene": "Il n'y a aucune scène disponible pour déposer au sol.",
+        "quantity": "Vous ne pouvez déposer que les objets dont la quantité est supérieure à 0."
+      },
+      "message": {
+        "subtitle": "Objet déposé au sol",
+        "content": {
+          "item": "{source} a déposé {quantity} × {item} sur le sol.",
+          "container": "{source} a déposé {item} et tout son contenu."
+        }
+      }
+    },
+    "heroActions": {
+      "error": {
+        "onlyCharacter": "Les actions de héros ne sont compatibles qu'avec les acteurs personnages",
+        "notEnoughPoint": "Le personnage n'a pas assez de points d'héroïsme",
+        "noDetails": "Impossible de trouver les détails de cette action de héros.",
+        "noAction": "Le personnage ne dispose d'aucune action de héros.",
+        "mustDiscard": "Le personnage doit défausser {nb} actions pour s'engager dans un échange.",
+        "noOther": "Il n'y a aucun autre personnage avec des actions de héros disponibles pour échanger.",
+        "notGM": "Vous devez être un MJ pour donner des actions de héros.",
+        "tradeError": "Une erreur s'est produite en tentant de traiter l'échange entre <strong>{sender}</strong> et <strong>{receiver}</strong>."
+      },
+      "giveActions": {
+        "asDrawn": "Définir comme tirée lorsqu'elle est donnée",
+        "drawn": "Déjà tirée",
+        "no": "Annuler",
+        "title": "Donner des actions de héros",
+        "withMessage": "Générer un message de conversation",
+        "yes": "Donner des actions"
+      },
+      "message": {
+        "drawn": "A tiré ({nb}) action(s) de héros",
+        "given": "A reçu ({nb}) action(s) de héros",
+        "discarded": "A rejeté ({nb}) action(s) de héros",
+        "used": {
+          "heroPoints": "Point d'héroïsme",
+          "mythicPoints": "Point mythique",
+          "message": "Dépense un {type} pour utiliser"
+        },
+        "exchanged": "A échangé une action de héros avec {name}",
+        "offer": "Offert : {link}",
+        "receive": "Reçu : {link}"
+      },
+      "removeActions": {
+        "all": "Tous les personnages",
+        "no": "Annuler",
+        "removed": "Les actions de héros ont été supprimées du/des personnage(s) sélectionné(s).",
+        "title": "Supprimer les actions de héros",
+        "yes": "Supprimer"
+      },
+      "sheet": {
+        "action": {
+          "use": "Utiliser",
+          "discard": "Défausser"
+        },
+        "draw": "Tirer {nb}",
+        "give": "Donner",
+        "label": "Actions de héros",
+        "redraw": "Refaire un tirage",
+        "trade": "Échanger"
+      },
+      "table": {
+        "noDraw": "Aucune action n'a pu être tirée de la table pour <strong>{name}</strong>.",
+        "notFound": "Aucune table de Point d'héroïsme n'a pu être trouvée sur ce monde.",
+        "noFormulaCompendium": "La table de cartes de héros n'a pas de formule et est une table de compendium.",
+        "drawError": "Une erreur s'est produite lors du tirage d'une action de héros, le tableau pourrait contenir des résultats non conformes."
+      },
+      "trade": {
+        "no": "Annuler",
+        "rejected": "L'échange entre <strong>{sender}</strong> et <strong>{receiver}</strong> a été rejeté.",
+        "request": {
+          "title": "Action de héros - Demande d'échange",
+          "flavor": "Le personnage <strong>{sender}</strong> souhaite échanger avec <strong>{receiver}</strong>",
+          "give": "Offre : {give}",
+          "want": "Souhaite : {want}",
+          "yes": "Accepter",
+          "no": "Rejeter"
+        },
+        "select": "Sélectionnez le personnage avec lequel échanger",
+        "title": "Échange d'action de héros",
+        "yes": "Envoyer"
+      },
+      "trigger": "Déclenchement"
+    },
+    "identify": {
+      "request": {
+        "hint": "A demandé une identification d'objet pour",
+        "proceed": "Souhaitez-vous poursuivre ?",
+        "sent": "Une demande d'identification d'objet a été envoyée au MJ."
+      },
+      "tracker": {
+        "auto": {
+          "content": "Identifier les objets déjà connus des membres du groupe :<br><ul>{items}</ul>",
+          "label": "Auto",
+          "none": "Il n'y a aucun objet à identifier automatiquement",
+          "title": "Identification automatique",
+          "tooltip": "Identifier automatiquement les objets connus"
+        },
+        "clock": {
+          "backward": "Reculer le temps de 10 minutes",
+          "forward": "Avancer le temps de 10 minutes",
+          "open": "Ouvrir le menu de l'horloge du monde"
+        },
+        "failed": {
+          "daily": "N'a pas réussi à identifier cet objet aujourd'hui",
+          "delay": "N'a pas réussi à identifier cet objet : {heures} heures restantes"
+        },
+        "identified": "Déjà identifié",
+        "known": {
+          "full": "Cet objet a déjà été identifié",
+          "partial": "A identifié un article similaire :<br>{item}",
+          "recall": "Peut dépenser une unique action Se souvenir<br>et réussir automatiquement"
+        },
+        "misidentify": "Activer/désactiver l'erreur d'identification",
+        "request-checks": "Solliciter des tests",
+        "reset": {
+          "label": "Réinitialiser",
+          "tooltip": "Annuler les modifications actuelles"
+        },
+        "save": {
+          "content": "Enregistrez les modifications actuelles et identifiez automatiquement le(s) objet(s) suivant(s) :<br><ul>{items}</ul>",
+          "label": "Mise à jour",
+          "title": "Mise à jour des modifications",
+          "tooltip": "Mettre à jour les modifications actuelles et identifier les éléments"
+        },
+        "send-to-chat": "Envoyer dans la conversation",
+        "title": "Suivi d'identification des objets"
+      }
+    },
+    "resourceTracker": {
+      "header": {
+        "add": "Ajouter une nouvelle ressource"
+      },
+      "resource": {
+        "title": {
+          "create": "Créer une nouvelle ressource",
+          "edit": "Modifier la ressource"
+        },
+        "name": {
+          "label": "Nom de la ressource",
+          "default": "Nouvelle ressource"
+        },
+        "value": {
+          "label": "Valeur",
+          "min": "Valeur minimale",
+          "max": "Valeur maximale",
+          "current": "Valeur actuelle"
+        },
+        "steps": {
+          "label": "Étapes de clic",
+          "step1": "[Clic]",
+          "step2": "[Maj-Clic]",
+          "step3": "[Contrôle-Clic]"
+        },
+        "timeout": {
+          "label": "Délai d'attente (secondes)",
+          "tooltip": "Temps écoulé dans votre monde avant que la valeur de la ressource ne soit réduite d' 1 cran"
+        },
+        "edit": "[Clic droit] Modifier la ressource",
+        "delete": "Supprimer la ressource ?",
+        "shared": "Visible pour les autres ?",
+        "yes": {
+          "create": "Créer",
+          "edit": "Modifier"
+        },
+        "no": "Annuler",
+        "increase": "{clic} augmenter de {value}",
+        "decrease": "{clic} diminuer de {value}"
+      }
+    },
+    "rollTracker": {
+      "tracker": {
+        "left": "Nombre de jets",
+        "bottom": "Valeur du jet",
+        "mode": {
+          "all": {
+            "label": "Tous les tests"
+          },
+          "attack-roll": {
+            "label": "Jets d'attaque"
+          },
+          "attack-roll-outcome": {
+            "label": "Résultats des attaques",
+            "bottom": "Résultats des jets"
+          },
+          "saving-throw": {
+            "label": "Jets de sauvegarde"
+          },
+          "saving-throw-outcome": {
+            "label": "Résultats des jets de sauvegarde",
+            "bottom": "Vigueur|Réflexes|Volonté"
+          },
+          "flat-check": {
+            "label": "Tests nus"
+          },
+          "skill-check": {
+            "label": "Tests de compétence"
+          },
+          "skill-check-1": {
+            "label": "Compétences (Première moitié)",
+            "bottom": "Test de compétence"
+          },
+          "skill-check-2": {
+            "label": "Compétences (Seconde moitié)",
+            "bottom": "Test de compétence"
+          },
+          "perception-check": {
+            "label": "Tests de Perception"
+          },
+          "initiative": {
+            "label": "Tests d'initiative"
+          }
+        },
+        "filter": {
+          "all": "Tout le temps",
+          "time": "Échelle de temps",
+          "session": "La session",
+          "encounter": "La rencontre"
+        },
+        "options": {
+          "from": "De",
+          "to": "À"
+        },
+        "controls": {
+          "play": "Reprendre l'enregistrement",
+          "pause": "Mettre en pause l'enregistrement",
+          "start": "Débuter la session",
+          "end": "Fin de la session",
+          "delete": "Effacer les enregistrements",
+          "session": "Les joueurs ne verront aucun résultat avant la fin de la session"
+        },
+        "info": {
+          "paused": {
+            "label": "L'enregistrement est en pause",
+            "tooltip": "Aucun jet ne sera enregistré dans votre monde"
+          },
+          "session": {
+            "label": "Actuellement en session",
+            "tooltip": "Aucun nouveau résultat ne sera montré avant que la session ne soit terminé"
+          }
+        },
+        "stats": {
+          "total": "Nombre de jets",
+          "mean": "Moyenne",
+          "median": "Médiane",
+          "mode": "Mode"
+        }
+      },
+      "clear": {
+        "title": "Effacer les enregistrements",
+        "hint": "Souhaitez vous effacer tous les enregistrement jusqu'à cette date ?",
+        "yes": "Effacer",
+        "no": "Annuler"
+      },
+      "confirm": {
+        "start": "Nouvelle Session <strong>{time}</strong> a démarré.",
+        "end": "Session <strong>{time}</strong> est terminée.",
+        "pause": "L'enregistrement des jets a été mis sur pause.",
+        "play": "L'enregistrement des jets a repris.",
+        "delete": {
+          "all": "Les enregistrements ont été effacés.",
+          "before": "Les enregistrements avant <strong>{time}</strong> ont été effacés."
+        }
+      }
+    },
+    "shareData": {
+      "config": {
+        "armorRunes": {
+          "label": "Runes d'armure",
+          "hint": "Utilisez les runes de puissance et & résilience de l'armure/des brassards investis par le maître."
+        },
+        "health": {
+          "label": "Réserve de santé",
+          "hint": "Partage les points de santé & d'endurance avec son maître."
+        },
+        "heroPoints": {
+          "label": "Points d'héroïsme",
+          "hint": "Utilise les points d'héroïsme du maître."
+        },
+        "languages": {
+          "label": "Langues",
+          "hint": "Ajouter les langues du maître à cet acteur."
+        },
+        "master": {
+          "label": "Maître",
+          "hint": "Sélectionnez un maître avec lequel cet acteur partagera les données."
+        },
+        "skills": {
+          "label": "Maîtrise des compétences & modificateurs",
+          "hint": "Utilisez les compétences du maître. Ajoute aussi les modificateurs d'objet du maître pour les compétences et la perception."
+        },
+        "spellcasting": {
+          "label": "Incantation",
+          "hint": "Utilisez les statistiques d'incantation et la réserve de focalisation du maître."
+        },
+        "timeEvents": {
+          "label": "Événements temporels",
+          "hint": "Chaque fois que le tour du maître commence/se termine ou que l'initiative change, les événements se déclenchent également pour cet acteur. Le maître servira également pour le calcul de la durée restante des effets."
+        },
+        "title": "Données partagées - {name}",
+        "unable": "Cet acteur ne peut pas être lié à un maître.",
+        "weaponRunes": {
+          "label": "Runes d'armes",
+          "hint": "Utilisez les runes fondamentales & de propriété des armes/bandelettes investies par le maître."
+        }
+      },
+      "share": "Partager",
+      "undo": {
+        "msg": "Les dégâts aux PV ne peuvent pas être annulés pour un acteur lié. Cela doit être modifié manuellement."
+      }
+    },
+    "targetHelper": {
+      "check-card": {
+        "merge": "Fusionner avec le message de dégâts suivant"
+      },
+      "damage": {
+        "toggle": "Activer/désactiver les boutons de dégâts d'origine"
+      },
+      "drop": {
+        "added": "Vous avez ajouté avec succès un jet de sauvegarde au message.",
+        "already": "Ce message possède déjà un jet de sauvegarde qui lui est associé.",
+        "unauth": "Vous ne pouvez le faire que sur les messages dont vous êtes l'auteur."
+      },
+      "header": {
+        "hidden": "Caché aux joueurs",
+        "noSave": "Cet acteur ne peut lancer des tests de {save}",
+        "select": "Sélectionner la cible<br>[Double-clic] Ouvrir la feuille"
+      },
+      "merge": {
+        "none": "Impossible de trouver un message de dégâts approprié avec lequel fusionner."
+      },
+      "reroll": {
+        "title": "Relancer le test de sauvegarde",
+        "yes": "Relancer",
+        "no": "Annuler",
+        "keeley": "Relance basse"
+      },
+      "rollSaves": "Lancer les jets de sauvegarde des PNJ",
+      "setTargets": {
+        "splashTargets": "Définir les cibles des éclaboussures",
+        "targets": "Définir les cibles"
+      },
+      "template": {
+        "all": "Aux deux",
+        "allies": "Aux alliés",
+        "dismiss": "Retirer le gabarit",
+        "enemies": "Aux ennemis",
+        "neutral": "Inclure les neutres",
+        "self": "S'inclure",
+        "title": "Assistant de gabarit",
+        "yes": "Cible"
+      },
+      "tooltip": {
+        "adjustment": "Ajustment : {value}",
+        "dcWithValue": "DD {dc}",
+        "reroll": "Peut relancer le jet de sauvegarde",
+        "result": {
+          "format": "Résultat : {result}",
+          "withOffset": "{success} de {offset}",
+          "withoutOffset": "{success}"
+        }
+      },
+      "unnamed": "Pas nommé"
+    }
+  }
+}

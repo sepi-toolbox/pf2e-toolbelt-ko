@@ -1,0 +1,122 @@
+.sheet.character .sheet-content .tab.feats {
+    .pf2e-toobelt-retrain-feat {
+        margin-right: 3px;
+    }
+}
+
+.sheet.actor section.window-content {
+    .image-container .hover-icon.show-players {
+        bottom: auto;
+        top: 0;
+    }
+
+    .with-sort-btn.disabled {
+        opacity: 0.4;
+    }
+
+    .spellcasting-entry .action-header .item-name.with-sort {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.spellcasting-entry.preparation > .window-content form > header h1.with-sort {
+    justify-content: start;
+    align-items: center;
+    gap: 0.1em;
+
+    > a {
+        font-size: 0.8em;
+    }
+
+    .with-sort-btn.disabled {
+        opacity: 0.4;
+    }
+
+    .flexible-available {
+        flex: 1;
+        text-align: end;
+    }
+}
+
+.application.pf2e-toolbelt-better-sheet-retrain {
+    min-width: 400px;
+
+    .window-content {
+        padding: 0.8rem;
+        gap: 0.8rem;
+
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .item,
+        .empty {
+            display: flex;
+            align-items: center;
+            height: 2.5rem;
+            font-size: 1.6em;
+        }
+
+        .item {
+            gap: 0.3em;
+
+            img {
+                height: 100%;
+                border: 1px solid #817432;
+                border-radius: 4px;
+            }
+        }
+
+        .empty {
+            border: 1px dotted;
+            justify-content: center;
+            opacity: 0.5;
+        }
+    }
+}
+
+.application.dialog.pf2e-toolbelt.toolbelt-split-item {
+    .form-fields {
+        flex: 0;
+
+        input {
+            width: 8ch;
+            text-align: end;
+        }
+    }
+}
+
+.application.dialog.pf2e-toolbelt.toolbelt-merge-items {
+    --highlight: #ffffff14;
+
+    .dialog-content {
+        gap: 0.5em;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+
+        img {
+            height: 2em;
+        }
+
+        .name {
+            flex: 1;
+        }
+
+        &:hover {
+            background: var(--highlight);
+        }
+    }
+}
+
+body.theme-light {
+    .application.dialog.pf2e-toolbelt.toolbelt-merge-items {
+        --highlight: #00000014;
+    }
+}

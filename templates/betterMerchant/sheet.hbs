@@ -1,0 +1,42 @@
+<div class="loot-distribution">
+    <div>
+        <button type="button" data-better-action="sell-items">
+            <i class="fa-solid fa-sack-dollar"></i>
+            {{@root.i18n 'sellItems.button'}}
+        </button>
+    </div>
+    {{#if isGM}}
+    <hr>
+    <div>
+        <button type="button" data-better-action="create-scrolls">
+            <i class="fa-solid fa-scroll"></i>
+            {{#if @root.isSF2e}}
+            {{@root.i18n 'gems'}}
+            {{else}}
+            {{@root.i18n 'scrolls'}}
+            {{/if}}
+        </button>
+    </div>
+    <div>
+        <button type="button" data-better-action="from-browser">
+            <i class="fa-solid fa-person-dolly"></i>
+            {{@root.i18n 'browser'}}
+        </button>
+    </div>
+    <div>
+        <button type="button" data-better-action="setup-filters">
+            <i class="fa-solid fa-filter-list"></i>
+            {{@root.i18n 'filters'}}
+        </button>
+    </div>
+    {{/if}}
+</div>
+{{#if isGM}}
+<div class="form-group">
+    <label>
+        <span>{{@root.i18n 'infiniteAll.label'}}</span>
+        <i class="fa-solid fa-info-circle" {{{@root.i18n.tooltip 'infiniteAll.tooltip' }}}></i>
+    </label>
+    <input type="checkbox" name="infiniteAll" {{checked infiniteAll}}>
+</div>
+{{/if}}

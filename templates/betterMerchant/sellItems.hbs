@@ -1,0 +1,43 @@
+<div class="inventory">
+    <div class="coins">
+        <div class="label">{{localize "PF2E.CurrencyLabel"}}</div>
+        {{#each inventory.currency as |value unit|}}
+        <div class="denomination {{unit}}">
+            <div class="image" data-tooltip="{{localize value.label}}"></div>
+            <div class="value">{{value.value}}</div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="info" data-tooltip="{{inventory.info}}">
+        <i class="fa-solid fa-circle-info"></i>
+    </div>
+</div>
+<div class="groups">
+    {{#each groups as |group|}}
+    <div class="header">
+        <div class="name">{{group.label}}</div>
+        <div class="price">{{localize "PF2E.Actor.Inventory.UnitTitle.Price"}}</div>
+        <div class="quantity">{{localize "PF2E.QuantityLabel"}}</div>
+        <div class="controls"></div>
+    </div>
+    <div class="items">
+        {{#each group.items as |item|}}
+        <div class="item" data-item-id="{{item.id}}">
+            <img src="{{item.img}}">
+            <div class="name">
+                <a data-action="open-sheet">{{item.name}}</a>
+            </div>
+            <div class="price {{item.diff}}" data-tooltip="{{item.originalPrice}}">
+                {{item.price}}
+            </div>
+            <div class="quantity">{{item.quantity}}</div>
+            <div class="controls">
+                <a data-action="sell-item" {{{@root.i18n.tooltip 'sell' }}}>
+                    <i class="fa-fw fa-solid fa-coins"></i>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>

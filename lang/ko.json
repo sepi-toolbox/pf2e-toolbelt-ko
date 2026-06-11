@@ -1,0 +1,1173 @@
+{
+    "PF2E.RuleElement.Actionable": "행동 가능",
+    "PF2E.RuleElement.ItemCast": "아이템 시전",
+    "LEVIKTIMES": {
+        "playerOnly": "플레이어 전용",
+        "gmOnly": "GM 전용",
+        "reloadRequired": "재시작 필요",
+        "emiting": {
+            "label": "전송 중",
+            "noGm": "이 요청을 처리하려면 GM이 접속 중이어야 합니다."
+        }
+    },
+    "pf2e-toolbelt": {
+        "keybindings": {
+            "conditionManager": {
+                "manage": {
+                    "name": "상태 관리",
+                    "hint": "상태를 드롭할 때 이 키를 누르고 있으면 지속 시간을 관리할 수 있습니다."
+                }
+            },
+            "betterMovement": {
+                "teleport": {
+                    "name": "토큰 순간이동",
+                    "hint": "장면을 클릭할 때 이 키를 누르고 있으면 선택된 모든 토큰을 즉시 순간이동시킵니다."
+                },
+                "unselect": {
+                    "name": "토큰 순간이동 (선택 해제)",
+                    "hint": "장면을 클릭할 때 이 키를 누르고 있으면 선택된 모든 토큰을 즉시 순간이동시킵니다. 단축키를 누를 때 토큰 선택도 해제하여 장면 전체를 막힘없이 볼 수 있습니다."
+                }
+            },
+            "droppeth": {
+                "droppeth": {
+                    "name": "Droppeth 보조키",
+                    "hint": "아이템을 바닥에 떨어뜨릴 때 누르고 있을 키."
+                }
+            }
+        },
+        "settings": {
+            "actionable": {
+                "title": "행동 가능 (Actionable)",
+                "action": {
+                    "name": "행동 매크로",
+                    "hint": "행동/재주에 매크로를 연결하는 방법을 추가합니다."
+                },
+                "apply": {
+                    "name": "자체 적용 효과 자동화",
+                    "hint": "자체 적용 효과의 '사용' 버튼이 자동으로 효과를 적용합니다."
+                },
+                "cast": {
+                    "name": "아이템 주문 시전",
+                    "hint": "물리 아이템이 장착/투자될 때 가상 주문 시전 항목을 생성하는 새 RuleElement를 추가합니다."
+                },
+                "item": {
+                    "name": "아이템 매크로",
+                    "hint": "장비 및 소모품 아이템에 매크로를 연결하는 방법을 추가합니다."
+                },
+                "physical": {
+                    "name": "물리 행동",
+                    "hint": "물리 아이템이 장착/투자될 때 가상 행동을 생성하는 새 RuleElement를 추가합니다."
+                },
+                "spell": {
+                    "name": "주문 매크로",
+                    "hint": "주문에 매크로를 연결하는 방법을 추가합니다."
+                },
+                "use": {
+                    "name": "소모품 사용",
+                    "hint": "소모품에 추가 '사용' 버튼을 추가하고 사용 시 사용자 정의 메시지를 생성합니다."
+                }
+            },
+            "anonymous": {
+                "title": "익명 (Anonymous)",
+                "action": {
+                    "name": "NPC 행동 익명화",
+                    "hint": "비플레이어 소유 액터가 채팅으로 전송한 행동이 플레이어에게 익명화됩니다."
+                },
+                "spell": {
+                    "name": "NPC 주문 익명화",
+                    "hint": "비플레이어 소유 액터가 시전한 주문이 플레이어에게 익명화됩니다."
+                },
+                "traits": {
+                    "name": "특성 표시",
+                    "hint": "모듈이 메시지를 익명화할 때 특성을 여전히 표시할지 여부.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "all": "모든 특성",
+                        "blacklist": "차단 목록 사용"
+                    }
+                }
+            },
+            "arp": {
+                "title": "자동 룬 진행 (Automatic Rune Progression)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "이 변형 규칙을 월드에서 사용할지 여부. 적절한 레벨에서 무기와 갑옷에 기본 룬/등급을 자동으로 부여합니다."
+                },
+                "force": {
+                    "name": "강제 업데이트",
+                    "hint": "활성화 시 액터 레벨에 따라 룬/등급이 항상 업데이트됩니다. 비활성화 시에는 해당 레벨에 마땅한 값보다 현재 낮은 룬/등급만 업그레이드됩니다."
+                },
+                "price": {
+                    "name": "룬/등급 가격 차감",
+                    "hint": "기본 룬/등급 가격을 무기 가격에서 차감할지 여부."
+                },
+                "shield": {
+                    "name": "방패 룬/등급",
+                    "hint": "방패도 업데이트할지 여부."
+                }
+            },
+            "autoCover": {
+                "title": "자동 엄폐 (Auto Cover)",
+                "creature": {
+                    "name": "생물 엄폐",
+                    "hint": "공격을 굴릴 때 생물이 약소 또는 표준 엄폐를 제공할지 여부.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "cross": "마주보는 두 변 교차",
+                        "zero": "임의의 변 교차",
+                        "ten": "10% 여유로 임의의 변",
+                        "twenty": "20% 여유로 임의의 변"
+                    }
+                },
+                "dead": {
+                    "name": "사망한 생물 제외",
+                    "hint": "사망한 생물은 엄폐를 제공하지 않습니다."
+                },
+                "prone": {
+                    "name": "쓰러진 생물 제외",
+                    "hint": "쓰러진 생물은 엄폐를 제공하지 않습니다."
+                },
+                "wall": {
+                    "name": "벽 엄폐",
+                    "hint": "공격자와 대상 사이 경로가 벽과 교차할 때 대상 생물이 표준 엄폐를 받을지 여부.",
+                    "choices": {
+                        "center-center": "중심 대 중심",
+                        "center-spread": "중심 대 확산",
+                        "center-corner": "중심 대 모서리",
+                        "corner-center": "모서리 대 중심",
+                        "corner-spread": "모서리 대 확산",
+                        "corner-corner": "모서리 대 모서리",
+                        "disabled": "비활성화"
+                    }
+                }
+            },
+            "betterChat": {
+                "title": "향상된 채팅 메시지 (Better Chat Message)",
+                "average": {
+                    "name": "피해 지표",
+                    "hint": "최소/최대 값 대비 굴림 결과를 보여주는 색상 표시를 피해 메시지에 추가합니다.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "standalone": "독립 표시",
+                        "background": "주사위 공식 배경"
+                    }
+                },
+                "merge": {
+                    "name": "병합 버튼",
+                    "hint": "피해 메시지에 다른 피해 메시지와 병합할 수 있는 버튼을 추가합니다."
+                },
+                "inject": {
+                    "name": "삽입 버튼",
+                    "hint": "피해 메시지에 이전 피해 메시지에 삽입할 수 있는 버튼을 추가합니다."
+                }
+            },
+            "betterEffectsPanel": {
+                "title": "향상된 효과 패널 (Better Effects Panel)",
+                "remove": {
+                    "name": "효과 제거 단축키",
+                    "hint": "효과 패널의 효과 아이콘에 [Shift + 우클릭]하면 모든 충전/카운터/배지가 즉시 제거됩니다."
+                }
+            },
+            "betterInventory": {
+                "title": "향상된 인벤토리 (Better Inventory)",
+                "coins": {
+                    "name": "무게 없는 동전",
+                    "hint": "인벤토리의 동전이 무게가 없습니다."
+                },
+                "dropped": {
+                    "name": "버려진 장비 부피 제외",
+                    "hint": "액터 인벤토리의 버려진 장비가 부피 계산에 포함되지 않습니다."
+                },
+                "improvised": {
+                    "name": "임시 무기 버튼",
+                    "hint": "캐릭터 액터 인벤토리에 즉석에서 임시 무기를 생성하는 버튼을 추가합니다."
+                },
+                "mergeItems": {
+                    "name": "아이템 병합 버튼",
+                    "hint": "인벤토리 탭에 아이템 묶음을 병합하는 버튼을 추가합니다."
+                },
+                "partyAsObserved": {
+                    "name": "파티 진영을 관찰자로",
+                    "hint": "'제한적' 권한만 있는 플레이어도 '파티' 진영에 속해 있으면 액터 시트를 관찰할 수 있게 허용합니다. ('파티' 액터와 혼동하지 마세요.)"
+                },
+                "splitItem": {
+                    "name": "아이템 분할 허용",
+                    "hint": "액터 시트의 아이템 수량 숫자를 클릭하여 여러 항목으로 분할합니다."
+                }
+            },
+            "betterMerchant": {
+                "title": "향상된 상인 (Better Merchant)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "기본 시스템 상인에 사용자 정의 기능을 추가합니다."
+                }
+            },
+            "betterMovement": {
+                "title": "향상된 이동 (Better Movement)",
+                "teleport": {
+                    "name": "토큰 순간이동",
+                    "hint": "정의된 단축키를 누른 채 보드를 클릭하면 선택된 토큰이 이동 과정 없이 즉시 해당 위치로 순간이동합니다.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "enabled": "활성화",
+                        "select": "토큰 재선택"
+                    }
+                },
+                "history": {
+                    "name": "이동 기록 안 함",
+                    "hint": "이동 기록을 막을지 여부. 같은 턴에 연속된 이동 행동이 덜 혼란스러워집니다."
+                }
+            },
+            "betterSheet": {
+                "title": "향상된 액터 시트 (Better Actor Sheet)",
+                "partyAsObserved": {
+                    "name": "파티 진영을 관찰자로",
+                    "hint": "'제한적' 권한만 있는 플레이어도 '파티' 진영에 속해 있으면 액터 시트를 관찰할 수 있게 허용합니다. ('파티' 액터와 혼동하지 마세요.)"
+                },
+                "retrainFeats": {
+                    "name": "재주 재훈련 버튼",
+                    "hint": "캐릭터 시트의 재주에 재훈련 버튼을 추가합니다."
+                },
+                "showPlayers": {
+                    "name": "플레이어에게 아바타 표시",
+                    "hint": "액터 시트 아바타 패널에 '플레이어에게 보이기' 버튼을 추가합니다."
+                },
+                "sortList": {
+                    "name": "목록 정렬 버튼",
+                    "hint": "액터 시트의 여러 목록에 정렬 버튼을 추가합니다."
+                }
+            },
+            "betterTrade": {
+                "title": "향상된 거래 (Better Trade)",
+                "invertTrade": {
+                    "name": "거래 보조키 반전",
+                    "hint": "플레이어가 거래를 시작하지 않고 아이템을 줄 때 더 이상 'shift'를 누를 필요가 없습니다. ('shift'를 누르면 거래 요청을 시작합니다.)"
+                }
+            },
+            "betterUI": {
+                "title": "향상된 UI (Better User Interface)",
+                "unscaleTokenHUD": {
+                    "name": "토큰 HUD 스케일링 제거",
+                    "hint": "토큰 HUD의 캔버스 스케일링을 되돌립니다."
+                }
+            },
+            "characterImporter": {
+                "title": "캐릭터 가져오기 (Character Importer)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "단계별로 Pathbuilder에서 캐릭터를 가져오도록 허용합니다.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "gm": "GM 전용",
+                        "all": "모든 사용자"
+                    }
+                }
+            },
+            "conditionManager": {
+                "title": "상태 관리자 (Condition Manager)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "정의된 단축키를 누른 채 상태를 드래그하면 지속 시간을 설정할 수 있는 상태 관리자가 열립니다."
+                }
+            },
+            "droppeth": {
+                "title": "Droppeth",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "할당된 키를 누른 채 사용자가 캔버스에 아이템을 떨어뜨릴 수 있도록 허용합니다."
+                },
+                "light": {
+                    "name": "광원",
+                    "hint": "떨어뜨린 아이템이 빛을 발산할지 여부. 전리품 액터에 아이템이 단 하나만 있을 때만 해당됩니다."
+                }
+            },
+            "giveth": {
+                "title": "Giveth",
+                "effect": {
+                    "name": "효과/상태",
+                    "hint": "플레이어가 소유하지 않은 액터에게 효과 및 상태를 드롭할 수 있는지 여부.",
+                    "choices": {
+                        "disabled": "비활성화",
+                        "ally": "동맹만",
+                        "all": "모든 액터"
+                    }
+                }
+            },
+            "heroActions": {
+                "title": "영웅 행동 (Hero Actions)",
+                "count": {
+                    "name": "영웅 세트 변형",
+                    "hint": "0이면 캐릭터는 영웅점당 하나의 영웅 행동만 가질 수 있습니다. 0이 아니면 영웅 행동 수가 사용 가능한 영웅점 수와 분리되며 캐릭터는 세트 단위로 영웅 행동을 다시 뽑습니다."
+                },
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "월드에서 영웅점 덱 행동을 사용할지 여부."
+                },
+                "private": {
+                    "name": "비공개 뽑기",
+                    "hint": "영웅 행동을 뽑을 때 생성되는 메시지를 비공개로 만듭니다. 활성화 시 거래는 모든 참가자에게 비공개됩니다."
+                },
+                "table": {
+                    "name": "테이블 UUID",
+                    "hint": "월드에서 사용할 테이블의 고유 식별자. 테이블의 UUID를 얻으려면 (대전집 또는 굴림 테이블 디렉토리에서) 테이블을 열고 이름 옆 📔를 좌클릭하세요."
+                },
+                "trade": {
+                    "name": "거래 허용",
+                    "hint": "활성화 시 캐릭터들이 서로 행동을 거래할 수 있습니다."
+                }
+            },
+            "identify": {
+                "title": "감정 (Identify)",
+                "delay": {
+                    "name": "24시간 지연",
+                    "hint": "활성화 시 캐릭터가 아이템 감정에 실패한 후 다시 시도하려면 24시간을 기다려야 합니다. 비활성화 시에는 다음 날 날짜에 초기화됩니다."
+                },
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "월드의 미감정 아이템을 관리하고 어떤 아이템이 감정되었는지 추적합니다."
+                },
+                "identifyPartials": {
+                    "name": "유사 아이템 자동 감정",
+                    "hint": "'알려진 아이템 자동 감정' 옵션 사용 시 '유사' 아이템도 함께 감정할지 여부."
+                },
+                "playerRequest": {
+                    "name": "플레이어 요청 허용",
+                    "hint": "플레이어가 아이템 감정을 요청할 수 있는지 여부."
+                }
+            },
+            "resourceTracker": {
+                "title": "자원 추적기 (Resource Tracker)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "이 도구를 월드에서 활성화합니다. 추적기는 왼쪽 UI 컨트롤로 토글할 수 있습니다."
+                }
+            },
+            "rollTracker": {
+                "title": "굴림 추적기 (Roll Tracker)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "굴림을 추적하여 플레이어들이 정말 그렇게 운이 없는지 확인합니다."
+                }
+            },
+            "shareData": {
+                "title": "공유 데이터 (Shared Data)",
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "액터들이 서로 데이터를 연결/공유할 수 있도록 합니다."
+                }
+            },
+            "targetHelper": {
+                "title": "대상 도우미 (Target Helper)",
+                "checks": {
+                    "name": "판정 메시지 업그레이드",
+                    "hint": "단순한 인라인 내성 메시지를 이 기능에서 사용할 수 있는 형태로 업그레이드합니다. 추가 세부 정보도 더해집니다."
+                },
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "월드에서 '대상 도우미' 기능을 활성화합니다."
+                },
+                "small": {
+                    "name": "작은 피해 버튼",
+                    "hint": "추가 대상에 대한 피해 버튼 크기를 줄입니다."
+                },
+                "targets": {
+                    "name": "메시지에 대상 추가",
+                    "hint": "채팅 메시지에 피해를 적용하고 내성을 굴릴 수 있는 추가 대상을 더합니다."
+                },
+                "template": {
+                    "name": "템플릿 도우미",
+                    "hint": "보드에 템플릿을 배치할 때 그 안의 모든 토큰을 대상으로 지정할 수 있는 새 대화상자가 표시됩니다."
+                }
+            },
+            "underground": {
+                "title": "지하 (Underground)",
+                "alpha": {
+                    "name": "불투명도",
+                    "hint": "토큰이 음수 고도일 때의 불투명도 값."
+                },
+                "contrast": {
+                    "name": "대비",
+                    "hint": "토큰이 음수 고도일 때의 대비 값."
+                },
+                "enabled": {
+                    "name": "활성화",
+                    "hint": "음수 고도의 토큰이 보드에 계속 보이도록 합니다."
+                },
+                "mode": {
+                    "name": "적용 필터",
+                    "hint": "음수 고도의 토큰에 적용할 필터 유형.",
+                    "choices": {
+                        "normal": "필터 없음",
+                        "greyscale": "회색조 필터",
+                        "sepia": "세피아 필터"
+                    }
+                },
+                "tiles": {
+                    "name": "배경 타일",
+                    "hint": "고도가 0 이하인 장면 타일은 음수 고도의 토큰 뒤에 항상 그려집니다. 참고: 타일을 다루는 다른 모듈과 충돌할 수 있습니다."
+                }
+            },
+            "unided": {
+                "title": "미감정 이미지 설정",
+                "create": {
+                    "name": "아이템 생성 시",
+                    "hint": "아이템이 생성/가져오기될 때 미감정 이미지를 일반 이미지와 동일하게 자동 설정합니다."
+                },
+                "update": {
+                    "name": "아이템 업데이트 시",
+                    "hint": "아이템의 일반 이미지가 업데이트될 때 미감정 이미지를 자동으로 업데이트합니다."
+                }
+            }
+        },
+        "actionable": {
+            "action": {
+                "label": "자체 적용 효과 / 매크로",
+                "hint": "이 행동을 사용하는 액터에게 적용될 단일 효과 아이템 또는 이 행동 사용 시 실행될 매크로",
+                "cancel": "<strong>{name}</strong> 행동이 매크로에 의해 취소되었습니다."
+            },
+            "cast": {
+                "equipped": "미장착",
+                "label": "아이템 주문 시전"
+            },
+            "generate-cast": {
+                "add": "규칙 추가",
+                "attribute": "능력치",
+                "dc": "DC",
+                "empty": "아이템 설명에서 추가 주문을 찾을 수 없습니다.",
+                "label": "아이템 시전",
+                "max": "최대 사용 횟수",
+                "predicate": "조건식",
+                "rank": "등급",
+                "statistic": "통계",
+                "title": "설명에서 '아이템 시전' 규칙 생성",
+                "tradition": "전통"
+            },
+            "item": {
+                "label": "매크로",
+                "hint": "이 아이템 사용 시 실행될 매크로",
+                "cancel": "<strong>{name}</strong> 사용이 매크로에 의해 취소되었습니다."
+            },
+            "spell": {
+                "label": "매크로",
+                "hint": "이 주문 시전 시 실행될 매크로",
+                "cancel": "<strong>{name}</strong> 시전이 매크로에 의해 취소되었습니다."
+            },
+            "virtual": "다음에 의해 추가된 가상 행동입니다:"
+        },
+        "anonymous": {
+            "action": {
+                "context": "행동을 플레이어에게 공개",
+                "header": "능력을 사용 중.."
+            },
+            "revealed": "공개자",
+            "spell": {
+                "damage": "주문 피해",
+                "context": "주문을 플레이어에게 공개",
+                "header": "주문을 시전 중.."
+            }
+        },
+        "autoCover": {
+            "creature": "생물로부터의 엄폐",
+            "greater": "강력한 엄폐",
+            "greater-prone": "강력한-쓰러짐 엄폐",
+            "lesser": "약소한 엄폐",
+            "none": "엄폐 없음",
+            "override": "엄폐 덮어쓰기",
+            "overriden": "덮어쓴 엄폐",
+            "standard": "표준 엄폐",
+            "wall": "벽으로부터의 엄폐"
+        },
+        "betterChat": {
+            "mergeDamage": {
+                "buttons": {
+                    "inject": "이전 메시지에 피해 삽입",
+                    "menu": {
+                        "inject": "[Shift] 삽입 메뉴 열기",
+                        "merge": "[Shift] 병합 메뉴 열기"
+                    },
+                    "merge": "이전 피해 메시지와 병합",
+                    "split": "원본 메시지로 다시 분할"
+                },
+                "injected": "이 메시지에 피해가 삽입되었습니다",
+                "menu": {
+                    "inject-damage": {
+                        "double": "2배 피해 삽입",
+                        "full": "전체 피해 삽입",
+                        "half": "절반 피해 삽입",
+                        "title": "삽입 메뉴",
+                        "yes": "삽입"
+                    },
+                    "merge-damage": {
+                        "double": "2배 피해 병합",
+                        "full": "전체 피해 병합",
+                        "half": "절반 피해 병합",
+                        "title": "병합 메뉴",
+                        "yes": "병합"
+                    },
+                    "originMerge": "현재 메시지",
+                    "targetMerge": "이전 메시지"
+                },
+                "noMatch": "병합할 다른 일치 피해 메시지를 찾을 수 없습니다."
+            }
+        },
+        "betterInventory": {
+            "improvised": {
+                "label": "임시 무기"
+            },
+            "merge": {
+                "none": "인벤토리에 병합할 아이템이 없습니다.",
+                "title": "아이템 병합 - {name}",
+                "yes": "병합"
+            },
+            "sheet": {
+                "improvised": "임시 무기 생성",
+                "merge": "아이템 병합",
+                "split": "아이템 분할"
+            },
+            "split": {
+                "quantity": {
+                    "label": "새 묶음 수량"
+                },
+                "title": "아이템 분할 - {name}",
+                "yes": "분할"
+            }
+        },
+        "betterMerchant": {
+            "browserFilter": {
+                "create": "필터 생성",
+                "edit": "필터 편집",
+                "empty": "..필터 없이 필터를 만드는 건 의미가 없습니다."
+            },
+            "browserPull": {
+                "add": "상인에 추가",
+                "all": "모두 전환",
+                "confirm": "<div>선택한 아이템(선택: <strong>{nb}</strong>)을 상인에 추가하시겠습니까?</div><div>아이템 수량에 따라 작업이 몇 초 걸릴 수 있습니다.</div>",
+                "finished": "아이템이 상인 액터에 추가 완료되었습니다.",
+                "limit": "한도에 도달했습니다!",
+                "owned": "이 아이템은 이미 상인의 인벤토리에 있습니다",
+                "selected": "선택됨",
+                "title": "아이템 추가 - {name}",
+                "wait": "아이템이 처리될 때까지 기다려 주세요."
+            },
+            "filtersMenu": {
+                "buy": "구매 필터",
+                "delete": {
+                    "title": "필터 삭제",
+                    "content": "이 필터를 정말 삭제하시겠습니까?"
+                },
+                "enabled": "활성화",
+                "ratio": "가격 비율",
+                "sell": "판매 필터",
+                "service": "서비스 필터",
+                "tag": "태그",
+                "title": "아이템 필터 - {name}",
+                "treasure": "이 필터에 도달한 보물은 항상 가격의 100%로 구매됩니다"
+            },
+            "importServices": {
+                "title": "서비스 가져오기 - {name}",
+                "yes": "가져오기",
+                "error": "서비스를 가져오는 중 오류가 발생했습니다."
+            },
+            "item": {
+                "buy": {
+                    "confirm": {
+                        "content": "<strong>{buyer}</strong>이(가) <strong>{item}</strong>을(를) 구매하시겠습니까?",
+                        "title": "아이템 구매 - {item}"
+                    },
+                    "noTarget": "이 상인에게서 구매하려면 유효한 액터를 선택해야 합니다"
+                },
+                "error": "향상된 상인 아이템 거래 처리 중 오류가 발생했습니다: <strong>{reason}</strong>.",
+                "noStock": "<strong>{actor}</strong>이(가) <strong>{item}</strong>의 요청 수량을 제공할 수 없습니다.",
+                "unwilling": "<strong>{actor}</strong>이(가) <strong>{item}</strong>을(를) 내놓을 의향이 없습니다.",
+                "refuse": "<strong>{actor}</strong>이(가) <strong>{item}</strong>의 구매에 관심이 없습니다.",
+                "sell": {
+                    "button": "판매",
+                    "prompt": "{actor}이(가) 이 아이템을 판매하시겠습니까?",
+                    "title": "{item} 판매"
+                },
+                "unided": "제정신인 사람은 누구도 임의의 미감정 아이템을 사고 싶어하지 않을 겁니다."
+            },
+            "sheet": {
+                "browser": "브라우저에서",
+                "filters": "필터 설정",
+                "gems": "주문 보석 생성",
+                "infiniteAll": {
+                    "label": "무한 재고",
+                    "tooltip": "상인은 판매할 아이템이 절대 떨어지지 않습니다 (보물이나 서비스에는 영향 없음)"
+                },
+                "none": "판매 안 함",
+                "scrolls": "두루마리 생성",
+                "sellItems": {
+                    "button": "아이템 판매",
+                    "noSelection": "유효한 판매 액터를 선택해야 합니다."
+                }
+            },
+            "sellItems": {
+                "empty": "<strong>{name}</strong>은(는) 당신이 제안할 어떤 것에도 관심이 없어 보입니다.",
+                "info": "다음 가격은 보물에 <u>{treasure}</u>, 다른 아이템에 <u>{item}</u>의 가정된 비율을 기준으로 색상이 지정됩니다.",
+                "title": "아이템 판매 - {name}",
+                "sell": "아이템 판매"
+            },
+            "sheetServices": {
+                "add": "서비스 추가",
+                "buy": "서비스 요청",
+                "copied": "<strong>{name}</strong> 서비스가 클립보드에 복사되었습니다.",
+                "delete": "서비스 삭제",
+                "edit": "서비스 편집",
+                "enabled": "서비스 전환",
+                "export": "서비스 내보내기",
+                "free": "무료",
+                "give": "무료 서비스",
+                "import": "서비스 가져오기",
+                "label": "서비스"
+            },
+            "service": {
+                "buy": "<strong>{buyer}</strong>이(가) <strong>{seller}</strong>의 서비스를 고용했습니다.",
+                "error": "향상된 상인 서비스({service}) 처리 중 오류가 발생했습니다: <strong>{reason}</strong>.",
+                "give": "<strong>{seller}</strong>이(가) <strong>{buyer}</strong>에게 서비스를 무료로 제공합니다.",
+                "noBuyer": "서비스의 대상으로 당신이 소유한 캐릭터/NPC/파티 하나를 선택해야 합니다.",
+                "noFunds": "<strong>{buyer}</strong>이(가) <strong>{seller}</strong>의 서비스를 고용할 자금이 부족합니다.",
+                "noStock": "<strong>{seller}</strong>은(는) 더 이상 그 서비스를 제공하지 않습니다.",
+                "unwilling": "<strong>{seller}</strong>은(는) 더 이상 그 서비스를 제공할 의향이 없습니다."
+            },
+            "serviceMenu": {
+                "buy": "<strong>{buyer}</strong>이(가) <strong>{seller}</strong>의 서비스를 고용했습니다.",
+                "copied": "서비스 <strong>{label}</strong>이(가) 클립보드에 복사되었습니다.",
+                "delete": {
+                    "title": "서비스 삭제",
+                    "content": "이 서비스를 정말 삭제하시겠습니까?"
+                },
+                "enabled": "활성화",
+                "error": "서비스 요청을 처리하는 중 오류가 발생했습니다",
+                "export": "서비스 내보내기",
+                "give": "<strong>{seller}</strong>이(가) <strong>{buyer}</strong>에게 서비스를 무료로 제공합니다.",
+                "macro": {
+                    "label": "서비스 시 실행할 매크로",
+                    "drop": "매크로를 여기에 드롭"
+                },
+                "name": "이름",
+                "noBuyer": "서비스의 대상으로 당신이 소유한 캐릭터/NPC/파티 하나를 선택해야 합니다.",
+                "noFunds": "<strong>{buyer}</strong>이(가) <strong>{seller}</strong>의 서비스를 고용할 자금이 부족합니다.",
+                "none": "서비스를 찾을 수 없습니다",
+                "noStock": "<strong>{seller}</strong>은(는) 더 이상 그 서비스를 제공하지 않습니다.",
+                "quantity": "음수면 무한 재고",
+                "tags": "서비스 태그",
+                "title": "서비스 - {label}"
+            }
+        },
+        "betterSheet": {
+            "retrain": {
+                "browser": "대전집 브라우저 열기",
+                "empty": "재주를 여기에 드롭",
+                "error": {
+                    "wrongDataType": "잘못된 데이터 유형",
+                    "wrongItemType": "재주만 허용됩니다"
+                },
+                "replace": "교체할 재주",
+                "retrain": "재훈련",
+                "title": "재주 재훈련"
+            },
+            "sortList": {
+                "sheet": {
+                    "tooltip": "내용 정렬",
+                    "container": "컨테이너 내용 정렬"
+                }
+            }
+        },
+        "characterImporter": {
+            "deleteData": {
+                "content": "이 캐릭터에서 가져오기 데이터를 정말 삭제하시겠습니까?<br><br>참고: 이 작업은 캐릭터 자체를 업데이트하지 않습니다.",
+                "title": "가져오기 데이터 삭제"
+            },
+            "import": {
+                "code": {
+                    "title": "JSON 코드 붙여넣기",
+                    "yes": "JSON 파싱"
+                },
+                "fail": "캐릭터 가져오기에 실패했습니다.",
+                "file": {
+                    "title": "JSON 파일 선택",
+                    "yes": "파일 파싱"
+                },
+                "success": "캐릭터 가져오기에 성공했습니다.",
+                "url": {
+                    "title": "캐릭터 JSON ID 입력",
+                    "yes": "URL 데이터 파싱"
+                }
+            },
+            "sheet": {
+                "level": {
+                    "cancel": "캐릭터 가져오기 메뉴 닫기",
+                    "import": "캐릭터 가져오기 메뉴 열기"
+                },
+                "import": {
+                    "code": "코드에서",
+                    "delete": "가져오기 데이터 삭제",
+                    "file": "파일에서",
+                    "url": "URL에서"
+                },
+                "data": {
+                    "core": {
+                        "attributes": {
+                            "assign": "능력치 증가 할당",
+                            "override": "수동 입력 방식 사용",
+                            "set": {
+                                "boosts": "능력치 증가가 할당되었습니다.",
+                                "manual": "능력치 값이 \"수동\"으로 할당되었습니다."
+                            },
+                            "warning": "가져온 데이터가 마지막 증가 임계값(레벨 {level})에 도달하지 못했습니다.<br>업데이트가 필요할 수 있습니다."
+                        }
+                    },
+                    "details": {
+                        "age": "나이",
+                        "assign": "세부 사항 항목 할당",
+                        "current": "현재",
+                        "expected": "예상",
+                        "gender": "성별",
+                        "language": {
+                            "assign": "언어 할당",
+                            "current": "현재 언어",
+                            "expected": "예상 언어"
+                        },
+                        "name": "이름"
+                    },
+                    "entry": {
+                        "action": {
+                            "install": "{match}을(를) 캐릭터에 추가",
+                            "locked": "새로고침 불가",
+                            "refresh": "현재 아이템 새로고침",
+                            "replace": "현재 항목을 {match}(으)로 교체",
+                            "revert": "덮어쓰기 제거"
+                        },
+                        "current": "현재",
+                        "drop": "{key} 드롭",
+                        "match": "일치",
+                        "override": "덮어쓰기"
+                    },
+                    "inventory": {
+                        "currency": {
+                            "assign": "화폐 덮어쓰기",
+                            "current": "현재",
+                            "expected": "예상"
+                        }
+                    },
+                    "skills": {
+                        "assign": "기술 할당",
+                        "current": "현재",
+                        "expected": "예상"
+                    },
+                    "spellcasting": {
+                        "add": {
+                            "content": "일치 데이터로 새 주문 시전 항목을 생성하시겠습니까?",
+                            "title": "새 주문 시전 항목 생성",
+                            "yes": "생성"
+                        },
+                        "fill": {
+                            "content": "주문 시전 항목에서 찾을 수 없었던 모든 주문을 추가하시겠습니까?",
+                            "label": "누락된 모든 주문 추가",
+                            "title": "누락 주문으로 주문 시전 채우기",
+                            "yes": "채우기"
+                        },
+                        "refresh": {
+                            "label": "슬롯 값 새로고침",
+                            "set": "주문 시전 슬롯이 새로고침되었습니다"
+                        }
+                    }
+                },
+                "menu": {
+                    "core": "핵심",
+                    "feats": "재주",
+                    "inventory": "아이템",
+                    "skills": "기술",
+                    "spells": "주문",
+                    "details": "세부 사항"
+                },
+                "title": "캐릭터 가져오기"
+            }
+        },
+        "conditionManager": {
+            "manager": {
+                "title": "상태 관리자 - {name}",
+                "add": "생성",
+                "cancel": "취소",
+                "origin": "출처",
+                "label": "라벨",
+                "anonymous": "익명"
+            }
+        },
+        "droppeth": {
+            "dialog": {
+                "button": "Droppeth",
+                "prompt": "몇 개의 아이템을 떨어뜨리시겠습니까?",
+                "title": "{item} Droppeth"
+            },
+            "error": {
+                "actor": "Droppeth 액터를 생성할 수 없습니다.",
+                "out-of-bounds": "제공된 위치에 Droppeth 토큰을 생성할 수 없습니다.",
+                "unknown": "선택한 아이템을 떨어뜨리는 중 문제가 발생했습니다.",
+                "no-scene": "Droppeth할 수 있는 장면이 없습니다.",
+                "quantity": "수량이 0보다 큰 아이템만 떨어뜨릴 수 있습니다."
+            },
+            "message": {
+                "subtitle": "Droppeth 아이템",
+                "content": {
+                    "item": "{source}이(가) {quantity} × {item}을(를) 바닥에 떨어뜨립니다.",
+                    "container": "{source}이(가) {item}과(와) 그 내용물 전부를 떨어뜨립니다."
+                }
+            }
+        },
+        "heroActions": {
+            "error": {
+                "onlyCharacter": "영웅 행동은 캐릭터 액터와만 호환됩니다",
+                "notEnoughPoint": "캐릭터에게 영웅점이 충분하지 않습니다",
+                "noDetails": "이 영웅 행동의 세부 정보를 찾을 수 없습니다.",
+                "noAction": "캐릭터에게 영웅 행동이 없습니다.",
+                "mustDiscard": "거래에 참여하려면 캐릭터가 {nb}개의 행동을 버려야 합니다.",
+                "noOther": "거래 가능한 영웅 행동을 가진 다른 캐릭터가 없습니다.",
+                "notGM": "영웅 행동을 부여하려면 GM이어야 합니다.",
+                "tradeError": "<strong>{sender}</strong>와(과) <strong>{receiver}</strong> 간의 거래 처리 중 오류가 발생했습니다."
+            },
+            "giveActions": {
+                "asDrawn": "부여 시 뽑힌 상태로 설정",
+                "drawn": "이미 뽑음",
+                "no": "취소",
+                "title": "영웅 행동 부여",
+                "withMessage": "채팅 메시지 생성",
+                "yes": "행동 부여"
+            },
+            "message": {
+                "drawn": "({nb})개의 영웅 행동을 뽑았습니다",
+                "given": "({nb})개의 영웅 행동을 받았습니다",
+                "discarded": "({nb})개의 영웅 행동을 버렸습니다",
+                "used": {
+                    "heroPoints": "영웅점",
+                    "mythicPoints": "신화점",
+                    "message": "사용을 위해 {type}을(를) 소모합니다"
+                },
+                "exchanged": "{name}와(과) 영웅 행동을 거래했습니다",
+                "offer": "제공: {link}",
+                "receive": "받음: {link}"
+            },
+            "removeActions": {
+                "all": "모든 캐릭터",
+                "no": "취소",
+                "removed": "선택한 캐릭터에서 영웅 행동이 제거되었습니다.",
+                "title": "영웅 행동 제거",
+                "yes": "제거"
+            },
+            "sheet": {
+                "action": {
+                    "use": "사용",
+                    "discard": "버리기"
+                },
+                "draw": "{nb}개 뽑기",
+                "give": "부여",
+                "label": "영웅 행동",
+                "redraw": "다시 뽑기",
+                "trade": "거래"
+            },
+            "table": {
+                "noDraw": "<strong>{name}</strong>을(를) 위해 테이블에서 행동을 뽑을 수 없었습니다.",
+                "notFound": "이 월드에서 영웅점 덱 테이블을 찾을 수 없습니다.",
+                "noFormulaCompendium": "영웅 덱 테이블에 수식이 없으며 대전집 테이블입니다.",
+                "drawError": "영웅 행동 뽑기 중 오류가 발생했습니다. 테이블에 비표준 결과가 포함되어 있을 수 있습니다."
+            },
+            "trade": {
+                "no": "취소",
+                "rejected": "<strong>{sender}</strong>와(과) <strong>{receiver}</strong> 간의 거래가 거절되었습니다.",
+                "request": {
+                    "title": "영웅 행동 - 거래 요청",
+                    "flavor": "<strong>{sender}</strong> 캐릭터가 <strong>{receiver}</strong>와(과) 거래를 원합니다",
+                    "give": "제공: {give}",
+                    "want": "원함: {want}",
+                    "yes": "수락",
+                    "no": "거절"
+                },
+                "select": "거래할 캐릭터를 선택하세요",
+                "title": "영웅 행동 거래",
+                "yes": "보내기"
+            },
+            "trigger": "발동"
+        },
+        "identify": {
+            "request": {
+                "hint": "다음 아이템의 감정을 요청했습니다",
+                "proceed": "진행하시겠습니까?",
+                "sent": "아이템 감정 요청이 GM에게 전송되었습니다."
+            },
+            "tracker": {
+                "auto": {
+                    "content": "파티 멤버들에게 이미 알려진 아이템을 감정합니다:<br><ul>{items}</ul>",
+                    "label": "자동",
+                    "none": "자동으로 감정할 아이템이 없습니다",
+                    "title": "자동 감정",
+                    "tooltip": "알려진 아이템 자동 감정"
+                },
+                "clock": {
+                    "backward": "시간을 10분 뒤로",
+                    "forward": "시간을 10분 앞으로",
+                    "open": "월드 시계 메뉴 열기"
+                },
+                "failed": {
+                    "daily": "오늘 이 아이템 감정에 실패했습니다",
+                    "delay": "이 아이템 감정에 실패했습니다:<br>{hours}시간 남음"
+                },
+                "identified": "이미 감정됨",
+                "known": {
+                    "full": "이 아이템을 이미 감정했습니다",
+                    "partial": "유사한 아이템을 감정했습니다:<br>{item}",
+                    "recall": "단일 지식 회상 행동을 사용해<br>자동으로 성공할 수 있습니다"
+                },
+                "misidentify": "오감정 전환",
+                "request-checks": "판정 요청",
+                "reset": {
+                    "label": "초기화",
+                    "tooltip": "현재 변경 사항 되돌리기"
+                },
+                "save": {
+                    "content": "현재 변경 사항을 저장하고 다음 아이템을 자동 감정합니다:<br><ul>{items}</ul>",
+                    "label": "업데이트",
+                    "title": "변경 사항 업데이트",
+                    "tooltip": "현재 변경 사항을 업데이트하고 아이템을 감정합니다"
+                },
+                "send-to-chat": "채팅으로 전송",
+                "title": "아이템 감정 추적기"
+            }
+        },
+        "resourceTracker": {
+            "header": {
+                "add": "새 자원 추가"
+            },
+            "resource": {
+                "title": {
+                    "create": "새 자원 생성",
+                    "edit": "자원 편집"
+                },
+                "name": {
+                    "label": "자원 이름",
+                    "default": "새 자원"
+                },
+                "value": {
+                    "label": "값",
+                    "min": "최소값",
+                    "max": "최대값",
+                    "current": "현재값"
+                },
+                "steps": {
+                    "label": "클릭 단계",
+                    "step1": "[클릭]",
+                    "step2": "[Shift-클릭]",
+                    "step3": "[Control-클릭]"
+                },
+                "timeout": {
+                    "label": "타임아웃 (초)",
+                    "tooltip": "자원 값이 1 감소하기 전에 월드에서 흐른 시간"
+                },
+                "edit": "[우클릭] 자원 편집",
+                "delete": "자원을 삭제하시겠습니까?",
+                "shared": "다른 사용자에게 표시?",
+                "yes": {
+                    "create": "생성",
+                    "edit": "편집"
+                },
+                "no": "취소",
+                "increase": "{click}으로 {value}만큼 증가",
+                "decrease": "{click}으로 {value}만큼 감소"
+            }
+        },
+        "rollTracker": {
+            "tracker": {
+                "left": "굴림 횟수",
+                "bottom": "굴림 값",
+                "mode": {
+                    "all": {
+                        "label": "모든 판정"
+                    },
+                    "attack-roll": {
+                        "label": "공격 굴림"
+                    },
+                    "attack-roll-outcome": {
+                        "label": "공격 결과",
+                        "bottom": "굴림 결과"
+                    },
+                    "saving-throw": {
+                        "label": "내성 판정"
+                    },
+                    "saving-throw-outcome": {
+                        "label": "내성 결과",
+                        "bottom": "인내|반사|의지"
+                    },
+                    "flat-check": {
+                        "label": "단순 판정"
+                    },
+                    "skill-check": {
+                        "label": "기술 판정"
+                    },
+                    "skill-check-1": {
+                        "label": "기술 (전반부)",
+                        "bottom": "기술 판정"
+                    },
+                    "skill-check-2": {
+                        "label": "기술 (후반부)",
+                        "bottom": "기술 판정"
+                    },
+                    "perception-check": {
+                        "label": "감지 판정"
+                    },
+                    "initiative": {
+                        "label": "선제 판정"
+                    }
+                },
+                "filter": {
+                    "all": "전체 기간",
+                    "time": "시간 범위",
+                    "session": "세션",
+                    "encounter": "조우"
+                },
+                "options": {
+                    "from": "시작",
+                    "to": "종료"
+                },
+                "controls": {
+                    "play": "기록 재개",
+                    "pause": "기록 일시정지",
+                    "start": "세션 시작",
+                    "end": "세션 종료",
+                    "delete": "기록 지우기",
+                    "session": "세션이 끝날 때까지 플레이어는 새 결과를 볼 수 없습니다"
+                },
+                "info": {
+                    "paused": {
+                        "label": "기록이 일시정지됨",
+                        "tooltip": "당신의 월드에서 어떤 굴림도 기록되지 않고 있습니다"
+                    },
+                    "session": {
+                        "label": "세션 진행 중",
+                        "tooltip": "현재 세션이 끝날 때까지 새 결과가 표시되지 않습니다"
+                    }
+                },
+                "stats": {
+                    "total": "굴림 수",
+                    "mean": "평균",
+                    "median": "중앙값",
+                    "mode": "최빈값"
+                }
+            },
+            "clear": {
+                "title": "기록 지우기",
+                "hint": "이 날짜까지의 기록을 지우시겠습니까?",
+                "yes": "지우기",
+                "no": "취소"
+            },
+            "confirm": {
+                "start": "새 세션 <strong>{time}</strong>이(가) 시작되었습니다.",
+                "end": "세션 <strong>{time}</strong>이(가) 종료되었습니다.",
+                "pause": "굴림 기록이 일시정지되었습니다.",
+                "play": "굴림 기록이 재개되었습니다.",
+                "delete": {
+                    "all": "기록이 지워졌습니다.",
+                    "before": "<strong>{time}</strong> 이전의 기록이 지워졌습니다."
+                }
+            }
+        },
+        "shareData": {
+            "config": {
+                "armorRunes": {
+                    "label": "갑옷 룬",
+                    "hint": "주인이 투자한 갑옷/팔보호대의 효력/회복 룬을 사용합니다."
+                },
+                "health": {
+                    "label": "체력 풀",
+                    "hint": "주인과 체력 및 인내심 점수를 공유합니다."
+                },
+                "heroPoints": {
+                    "label": "영웅점",
+                    "hint": "주인의 영웅점을 사용합니다."
+                },
+                "languages": {
+                    "label": "언어",
+                    "hint": "이 액터에 주인의 언어를 추가합니다."
+                },
+                "master": {
+                    "label": "주인",
+                    "hint": "이 액터가 데이터를 공유할 주인을 선택합니다."
+                },
+                "skills": {
+                    "label": "기술 숙련도 및 수정치",
+                    "hint": "주인의 기술 숙련도를 사용합니다. 기술 및 감지에 대한 주인의 아이템 수정치도 추가합니다."
+                },
+                "spellcasting": {
+                    "label": "주문 시전",
+                    "hint": "주인의 주문 시전 통계와 집중 풀을 사용합니다."
+                },
+                "timeEvents": {
+                    "label": "시간 이벤트",
+                    "hint": "주인의 턴이 시작/종료되거나 선제가 변경될 때마다 이 액터에서도 이벤트가 발동됩니다. 효과의 남은 지속 시간 계산에도 주인을 사용합니다."
+                },
+                "title": "공유 데이터 - {name}",
+                "unable": "이 액터는 주인과 연결될 수 없습니다.",
+                "weaponRunes": {
+                    "label": "무기 룬",
+                    "hint": "주인이 투자한 핸드랩스/무기의 기본 및 속성 룬을 사용합니다."
+                }
+            },
+            "share": "공유",
+            "undo": {
+                "msg": "묶인 액터에서는 HP 피해를 되돌릴 수 없으며 수동으로 처리해야 합니다."
+            }
+        },
+        "targetHelper": {
+            "check-card": {
+                "merge": "다음 피해 메시지와 병합"
+            },
+            "damage": {
+                "toggle": "원본 피해 버튼 전환"
+            },
+            "drop": {
+                "added": "메시지에 내성 굴림을 추가했습니다.",
+                "already": "이 메시지에는 이미 내성 판정이 연결되어 있습니다.",
+                "unauth": "본인이 작성자인 메시지에만 그 작업을 할 수 있습니다."
+            },
+            "header": {
+                "hidden": "플레이어에게 숨김",
+                "noSave": "이 액터는 {save} 판정을 굴릴 수 없습니다",
+                "select": "대상 선택<br>[더블 클릭] 시트 열기"
+            },
+            "merge": {
+                "none": "병합할 적합한 피해 메시지를 찾을 수 없습니다."
+            },
+            "reroll": {
+                "title": "내성 판정 재굴림",
+                "yes": "재굴림",
+                "no": "취소",
+                "keeley": "낮은 재굴림"
+            },
+            "rollSaves": "NPC 내성 굴림",
+            "setTargets": {
+                "splashTargets": "튀김 대상 설정",
+                "targets": "대상 설정"
+            },
+            "template": {
+                "all": "양쪽",
+                "allies": "동맹",
+                "dismiss": "템플릿 제거",
+                "enemies": "적",
+                "neutral": "중립 포함",
+                "self": "자신 포함",
+                "title": "템플릿 도우미",
+                "yes": "대상 지정"
+            },
+            "tooltip": {
+                "adjustment": "조정: {value}",
+                "dcWithValue": "DC {dc}",
+                "reroll": "내성 판정을 재굴림할 수 있습니다",
+                "result": {
+                    "format": "결과: {result}",
+                    "withOffset": "{success} ({offset} 차이)",
+                    "withoutOffset": "{success}"
+                }
+            },
+            "unnamed": "이름 없음"
+        }
+    }
+}

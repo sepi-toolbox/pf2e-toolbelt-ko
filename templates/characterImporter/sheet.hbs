@@ -1,0 +1,103 @@
+<div class="importer-header">
+    <div class="title">
+        {{@root.i18n 'title'}}
+    </div>
+    <div class="import">
+        <a data-action="import-url">
+            <i class="fa-regular fa-globe"></i>
+            {{@root.i18n 'import.url'}}
+        </a>
+        <a data-action="import-file">
+            <i class="fa-solid fa-file-import"></i>
+            {{@root.i18n 'import.file'}}
+        </a>
+        <a {{#if hasData}} data-action="delete-data" {{else}} class="disabled" {{/if}} {{{@root.i18n.tooltip 'import.delete' }}}>
+            <i class="fa-solid fa-trash"></i>
+        </a>
+    </div>
+    <div class="menu">
+        {{#each menu as |entry|}}
+        <a class="entry" data-action="select-tab" data-tab="{{entry.type}}">
+            <i class="{{entry.icon}}"></i>
+            <span>{{@root.i18n 'menu' entry.type}}</span>
+        </a>
+        {{/each}}
+    </div>
+</div>
+{{#each tabs as |data tab|}}
+<div class="data" data-tab="{{tab}}">
+    {{> (@root.partial tab) data}}
+</div>
+{{/each}}
+
+{{#*inline 'entry'}}
+<div class="entry{{#if depth}} child{{/if}}" data-droppable data-item-type="{{itemType}}" {{#if
+    index includeZero=true}} data-index="{{index}}" {{/if}} {{#if parent}} data-parent="{{parent}}"
+    {{/if}} {{#if current}}data-item-id="{{current.id}}"{{/if}} style="--depth: {{depth}}">
+    <img src="{{img}}">
+    <div class="header">
+        <div class="section">
+            <div class="label">
+                {{label}}:
+            </div>
+            <div class="value">
+                {{ifThen source.label source.label '––'}}
+            </div>
+        </div>
+        <div class="controls">
+            {{#each actions as |action|}}
+            <a class="action" data-action="entry-{{action.type}}" data-tooltip="{{action.label}}">
+                <i class="{{action.icon}}"></i>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="index">
+        <div class="section">
+            <div class="label">
+                {{@root.i18n 'data.entry' (ifThen isOverride 'override' 'match')}}:
+            </div>
+            <div class="value">
+                {{#if selection}}
+                {{#if (gt quantity.selection 1)}}
+                {{quantity.selection}}x
+                {{/if}}
+                <a data-action="open-sheet" data-item-uuid="{{selection.uuid}}" data-tooltip="CONTROLS.CommonOpenSheet">
+                    {{selection.name}}
+                </a>
+                {{else}}
+                <span>––</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="section">
+            <div class="label">
+                {{@root.i18n 'data.entry.current'}}:
+            </div>
+            <div class="value">
+                {{#if current}}
+                {{#if (gt quantity.current 1)}}
+                {{quantity.current}}x
+                {{/if}}
+                <a data-action="open-sheet" data-item-uuid="{{current.uuid}}" data-tooltip="CONTROLS.CommonOpenSheet">
+                    {{current.name}}
+                </a>
+                {{else}}
+                <span>––</span>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    {{#if isExtra}}
+    <div class="extra">
+        <i class="fa-solid fa-star"></i>
+    </div>
+    {{/if}}
+    {{#if level}}
+    <div class="level">{{level}}</div>
+    {{/if}}
+</div>
+{{#each children as |child|}}
+{{> 'entry' child}}
+{{/each}}
+{{/inline}}
